@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>NOUVELLE VAGUE</title>
+    <title>NOUVELLE </title>
 </head>
 <body>
         <center><h1>NOUVELLE VAGUE</h1></center>
