@@ -1,4 +1,4 @@
-
+<style>
     body{
         margin: 0px;
         padding: 0px;
@@ -49,4 +49,4 @@
         float : left;
         padding: 35px;
     }*/
-
+</style>
