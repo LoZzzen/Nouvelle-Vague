@@ -11,7 +11,7 @@
 
     
     <nav>
-        <ul class = "menu">
+        <ul>
             <li><?php echo anchor("MonControleur/index", "Acceuil"); ?></li>
             <li><?php echo anchor("MonControleur/lesTF", "Temp Fort"); ?></li>
             <li><?php echo anchor("MonControleur/connexion", "Connexion"); ?></li>
