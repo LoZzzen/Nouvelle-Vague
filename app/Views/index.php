@@ -7,7 +7,7 @@
     <title>NOUVELLE VAGUE</title>
 </head>
 <body>
-        <center><h1>NOUVELLE VAGUE</h1></center>
+        <center><h1>NOUVELLE</h1></center>
 
     
     <nav>
