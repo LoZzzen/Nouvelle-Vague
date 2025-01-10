@@ -5,8 +5,7 @@ class MonControleur extends BaseController{
    
     public function index()
     {
-        return view('index')
-        .view('style');
+        return view('accueil');
     }
 
     public function lesTF()
