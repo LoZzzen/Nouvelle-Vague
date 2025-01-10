@@ -16,8 +16,7 @@
             <li><?php echo anchor("MonControleur/lesTF", "Temp Fort"); ?></li>
             <li><?php echo anchor("MonControleur/connexion", "Connexion"); ?></li>
         </ul>
-        </nav>
-        
+        </nav>  
 </body>
 </html>
 
