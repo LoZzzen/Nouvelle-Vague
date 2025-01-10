@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 class MonControleur extends BaseController{
+   
     public function index()
     {
         return view('index')
