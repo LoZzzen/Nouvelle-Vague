@@ -112,7 +112,7 @@
     <nav>
         <ul>
             <li><a href="<?= base_url('MonControleur/index'); ?>">Accueil</a></li>
-            <li><a href="<?= base_url('MonControleur/lesTF'); ?>">Temp Fort</a></li>
+            <li><a href="<?= base_url('MonControleur/lesTF'); ?>">Temp</a></li>
             <li><a href="<?= base_url('MonControleur/connexion'); ?>">Connexion</a></li>
         </ul>
     </nav>
