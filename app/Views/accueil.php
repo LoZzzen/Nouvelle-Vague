@@ -16,7 +16,7 @@
 
         /* En-tête */
         header {
-            background: linear-gradient(to right,rgb(248, 243, 166),rgb(235, 200, 172));
+            background: linear-gradient(to right,rgb(164, 197, 240),rgb(37, 85, 217));
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -33,7 +33,7 @@
 
         /* Barre de navigation */
         nav {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(84, 104, 237, 0.9);
             display: flex;
             justify-content: center;
             padding: 15px 10px;
@@ -60,7 +60,7 @@
         }
 
         nav a:hover {
-            color:rgb(216, 172, 136);
+            color:rgb(9, 9, 9);
             transform: scale(1.1);
         }
 
@@ -84,7 +84,7 @@
 
         /* Pied de page */
         footer {
-            background: linear-gradient(to right,rgb(240, 237, 95),rgb(245, 173, 114));
+            background: linear-gradient(to right,rgb(144, 184, 238),rgb(69, 110, 221));
             color: white;
             text-align: center;
             padding: 15px 0;

@@ -5,6 +5,7 @@ class MonControleur extends BaseController{
    
     public function index()
     {
+        
         return view('accueil');
         
     }
