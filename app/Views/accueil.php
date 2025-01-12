@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> NOUVELLE VAGUE</title>
     <style>
-        /* Style global */
+       
+       /* Style global */
         body {
             margin: 0;
             padding: 0;
@@ -33,7 +34,7 @@
 
         /* Barre de navigation */
         nav {
-            background-color: rgba(84, 104, 237, 0.9);
+            background-color: rgba(139, 148, 202, 0.9);
             display: flex;
             justify-content: center;
             padding: 15px 10px;
