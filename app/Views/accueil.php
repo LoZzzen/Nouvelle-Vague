@@ -6,7 +6,7 @@
     <title> NOUVELLE VAGUE</title>
     <style>
        
-       /* Style global */
+       /* style global */
         body {
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
             min-height: 100vh;
         }
 
-        /* En-tête */
+        /* en-tête */
         header {
             background: linear-gradient(to right,rgb(164, 197, 240),rgb(37, 85, 217));
             color: white;
@@ -32,7 +32,7 @@
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
         }
 
-        /* Barre de navigation */
+        /* barre de navigation */
         nav {
             background-color: rgba(139, 148, 202, 0.9);
             display: flex;
@@ -65,7 +65,7 @@
             transform: scale(1.1);
         }
 
-        /* Section principale */
+        /* section principale */
         .main {
             padding: 60px 20px;
             text-align: center;
@@ -83,7 +83,7 @@
             color: #555;
         }
 
-        /* Pied de page */
+        /* pied de page */
         footer {
             background: linear-gradient(to right,rgb(144, 184, 238),rgb(69, 110, 221));
             color: white;
@@ -100,25 +100,26 @@
             font-size: 0.9em;
             letter-spacing: 0.5px;
         }
+        
     </style>
 </head>
 <body>
 
-    <!-- En-tête -->
+    <!-- en-tête -->
     <header>
         <h1>NOUVELLE VAGUE</h1>
     </header>
 
-    <!-- Barre de navigation -->
+    <!-- barre de navigation -->
     <nav>
         <ul>
             <li><a href="<?= base_url('MonControleur/index'); ?>">Accueil</a></li>
-            <li><a href="<?= base_url('MonControleur/lesTF'); ?>">Temp</a></li>
+            <li><a href="<?= base_url('MonControleur/lesTF'); ?>">Temp Fort</a></li>
             <li><a href="<?= base_url('MonControleur/connexion'); ?>">Connexion</a></li>
         </ul>
     </nav>
 
-    <!-- Section principale -->
+    <!-- section principale -->
     <div class="main">
 
     
@@ -129,7 +130,7 @@
         </p>
     </div>
 
-    <!-- Pied de page -->
+    <!-- pied de page -->
     <footer>
         <p>&copy; 2025 NOUVELLE VAGUE </p>
     </footer>

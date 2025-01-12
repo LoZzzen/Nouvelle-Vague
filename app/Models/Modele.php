@@ -10,44 +10,19 @@ class Modele extends Model{
         $db->close();
         return $result->getResultArray();
     }*/
-    public function getDesContacts(){
-        $db = \Config\Database::connect();
-        $builder = $db->table('Igniter');
-        $query = $builder->get();
-        return $query->getResultArray();  
-    }
-    /*public function getNbContacts(){     
-        $db = \Config\Database::connect();        
-        $sql = "SELECT COUNT(*) as nb FROM Igniter";
-        $query = $db->query($sql);
-        $result = $query->getRowArray();
-        $db->close();
-        return $result['nb'];
-    }*/
-    public function getNbContacts(){
-        $db = \Config\Database::connect();
-        $builder = $db->table('Igniter');
-        $builder->selectCount('id');
-        $query = $builder->get();
-        $result = $query->getResult();
-        return $result[0]->id;
-    }
-    /*public function insertContact($log, $mdp, $mail){
-        $db = \Config\Database::connect(); 
-        $sql = "INSERT INTO Igniter (login,mdp, mail) VALUES('$log', '$mdp','$mail')";
-        $result = $db->query($sql);
-        $db->close();
-        return $result; 
-    }*/
-    public function insertContact($log, $mdp, $mail){
-        $db = \Config\Database::connect();
-        $builder = $db->table('Igniter');
-        $data = [
-            'login'  => $log,
-            'mdp'    => $mdp,
-            'mail'   => $mail,
-        ];
-        $result = $builder->insert($data);
-        return $result; 
+    
+    class Monmodele extends Model
+    {
+        protected $table = 'evenement'; // Le nom de la table
+        protected $primaryKey = 'id'; // La clé primaire
+        protected $allowedFields = ['nom', 'date', 'description', 'lieu']; // Champs autorisés
+
+        // Méthode pour récupérer tous les événements
+        public function getEvenements()
+        
+        {
+            return $this->findAll(); 
+        }
+
     }
 }
