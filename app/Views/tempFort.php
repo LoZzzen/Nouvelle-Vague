@@ -122,9 +122,23 @@
     <!-- barre de navigation -->
     <nav>
         <ul>
-            <li><a href="<?= base_url('MonControleur/index'); ?>">Accueil</a></li>
-            <li><a href="<?= base_url('MonControleur/lesTF'); ?>">Temp Fort</a></li>
-            <li><a href="<?= base_url('MonControleur/connexion'); ?>">Connexion</a></li>
+        <li>
+        <?php
+            echo anchor('MonControleur/index', ' Accueil'); 
+        ?>
+        </li>
+        <br> <br>
+        <li>
+            <?php
+                 echo anchor('MonControleur/lesTF', ' Temp Fort'); 
+            ?>
+        </li>
+        <br> <br>
+        <li>
+            <?php
+                echo anchor('MonControleur/connexion', ' Connexion'); 
+            ?>
+        </li>
         </ul>
     </nav>
     <!-- section principale -->
@@ -134,16 +148,17 @@
 
         <p>Découvrez les événements à ne pas manquer cette saison !</p>
 
-        <div class="event-list">
-            <?php foreach ($lesEvenements as $evenements): ?>
-                <div class="event-card">
-                    <h3><?= esc($evenements['nom']); ?></h3>
-                    <p><strong>Date:</strong> <?= esc($evenements['date']); ?></p>
-                    <p><strong>Lieu:</strong> <?= esc($evenements['lieu']); ?></p>
-                    <p><strong>Description:</strong> <?= esc($evenements['description']); ?></p>
-                </div>
-            <?php endforeach; ?>
-        </div>  
+      <div class="event-list">
+    <?php foreach ($lesEvenements as $evenements): ?>
+        <div class="event-card">
+            <h3><?= esc($evenements['nomEvenement']); ?></h3>
+            <img src=   ($evenements['image']); ?>" alt="<?= esc($evenements['nomEvenement']); ?>">
+            <p><strong>Date :</strong> <?= esc($evenements['dateEvenement']); ?></p>
+            <p><strong>Lieu :</strong> <?= esc($evenements['lieu']); ?></p>
+            <p><strong>Description :</strong> <?= esc($evenements['description']); ?></p>
+        </div>
+    <?php endforeach; ?>
+</div> 
     </div>
     <!-- pied de page -->
     <footer>
