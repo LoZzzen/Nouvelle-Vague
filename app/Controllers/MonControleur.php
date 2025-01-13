@@ -1,21 +1,40 @@
 <?php
 namespace App\Controllers;
 
-class MonControleur extends BaseController{
-    
-    public function index() {
+use App\Models\Modele;
+
+class MonControleur extends BaseController
+{
+    /**
+     * Affiche la page d'accueil
+     */
+    public function index()
+    {
         return view('accueil');
     }
 
-    public function lesTF(){     
-        $monmodel = new \App\Models\Modele();
-        $evenements['lesEvenements'] = $monmodel->getEvenements();
-        return view('tempFort', $evenements);
+    /**
+     * Affiche les Temps Forts avec les données des événements
+     */
+    public function lesTF()
+    {
+        // Charger le modèle
+        $monmodel = new Modele();
+
+        // Récupérer les événements depuis la base de données
+        $data['lesEvenements'] = $monmodel->getEvenements();
+
+        // Charger la vue avec les données des événements
+        return view('tempFort', $data);
     }
-  
-    public function connexion() {
-        return view('index') 
-        .view('connexion');
+
+    /**
+     * Affiche la page de connexion
+     */
+    public function connexion()
+    {
+        // Charger plusieurs vues
+        echo view('index');
+        echo view('connexion');
     }
- 
 }

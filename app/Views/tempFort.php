@@ -148,17 +148,19 @@
 
         <p>Découvrez les événements à ne pas manquer cette saison !</p>
 
-      <div class="event-list">
-    <?php foreach ($lesEvenements as $evenements): ?>
+        <div class="event-list">
+    <?php foreach ($lesEvenements as $evenement): ?>
         <div class="event-card">
-            <h3><?= esc($evenements['nomEvenement']); ?></h3>
-            <img src=   ($evenements['image']); ?>" alt="<?= esc($evenements['nomEvenement']); ?>">
-            <p><strong>Date :</strong> <?= esc($evenements['dateEvenement']); ?></p>
-            <p><strong>Lieu :</strong> <?= esc($evenements['lieu']); ?></p>
-            <p><strong>Description :</strong> <?= esc($evenements['description']); ?></p>
+            <h3><?= esc($evenement['nomEvenement']); ?></h3>
+            <!-- Affichage de l'image -->
+            <img src="<?= base_url($evenement['image']); ?>" alt="<?= esc($evenement['nomEvenement']); ?>" style="width:100%; height:auto;">
+            <p><strong>Date :</strong> <?= esc($evenement['dateEvenement']); ?></p>
+            <p><strong>Lieu :</strong> <?= esc($evenement['lieu']); ?></p>
+            <p><strong>Description :</strong> <?= esc($evenement['description']); ?></p>
         </div>
     <?php endforeach; ?>
-</div> 
+</div>
+
     </div>
     <!-- pied de page -->
     <footer>
