@@ -1,8 +1,8 @@
 <?php
 namespace App\Models;
-use CodeIgniter\Model;
+use CodeIgniter\Models;
     
-    class Monmodele extends Model
+    class Modele extends Model
     {
 
         // Méthode pour récupérer tous les événements

@@ -7,16 +7,15 @@ class MonControleur extends BaseController{
         return view('accueil');
     }
 
-    public function lesTF()
-    {     
-        $monmodel = new \app\Models\Monmodele();
-        $evenements['lesEvenement'] = $monmodel->getEvenements();
-      
-        return view('tempFort', ['evenements' => $evenements]);
+    public function lesTF(){     
+       //$monmodel = new \App\Models\Modele();
+        //$evenements['lesEvenement'] = $monmodel->getEvenements();
+        return view('tempFort');
     }
   
     public function connexion() {
-        return view('index') . view('connexion');
+        return view('index') 
+        .view('connexion');
     }
  
 }
