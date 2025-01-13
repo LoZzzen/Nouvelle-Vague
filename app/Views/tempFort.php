@@ -115,12 +115,10 @@
     </style>
 </head>
 <body>
-
     <!-- en-tête -->
     <header>
         <h1>LES TEMPS FORT</h1>
     </header>
-
     <!-- barre de navigation -->
     <nav>
         <ul>
@@ -129,7 +127,6 @@
             <li><a href="<?= base_url('MonControleur/connexion'); ?>">Connexion</a></li>
         </ul>
     </nav>
-
     <!-- section principale -->
     <div class="main">
 
@@ -138,22 +135,19 @@
         <p>Découvrez les événements à ne pas manquer cette saison !</p>
 
         <div class="event-list">
-            <?php foreach ($evenements as $evenement): ?>
+            <?php foreach ($lesEvenements as $evenements): ?>
                 <div class="event-card">
-                    <h3><?= esc($evenement['nom']); ?></h3>
-                    <p><strong>Date:</strong> <?= esc($evenement['date']); ?></p>
-                    <p><strong>Lieu:</strong> <?= esc($evenement['lieu']); ?></p>
-                    <p><strong>Description:</strong> <?= esc($evenement['description']); ?></p>
+                    <h3><?= esc($evenements['nom']); ?></h3>
+                    <p><strong>Date:</strong> <?= esc($evenements['date']); ?></p>
+                    <p><strong>Lieu:</strong> <?= esc($evenements['lieu']); ?></p>
+                    <p><strong>Description:</strong> <?= esc($evenements['description']); ?></p>
                 </div>
             <?php endforeach; ?>
-        </div>
-        
+        </div>  
     </div>
-
     <!-- pied de page -->
     <footer>
         <p> &copy; 2025 NOUVELLE VAGUE </p>
     </footer>
-
 </body>
 </html>
