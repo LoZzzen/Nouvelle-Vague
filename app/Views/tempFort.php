@@ -13,12 +13,14 @@
             min-height: 100vh;
         }
 
-        header {
-            background: linear-gradient(to right,rgb(164, 197, 240),rgb(37, 85, 217));
+   /* En-tête */
+   header {
+            background: rgba(37, 85, 217, 0.85);
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid #fff;
         }
 
         header h1 {
@@ -26,14 +28,15 @@
             font-size: 2.8em;
             font-weight: bold;
             letter-spacing: 2px;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
         }
 
+        /* Barre de navigation */
         nav {
             background-color: rgba(139, 148, 202, 0.9);
             display: flex;
             justify-content: center;
-            padding: 15px 10px;
+            padding: 10px 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
@@ -50,14 +53,14 @@
 
         nav a {
             text-decoration: none;
-            color: #333;
+            color: #fff;
             font-size: 1.2em;
             font-weight: bold;
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
         nav a:hover {
-            color: rgb(9, 9, 9);
+            color: #f1f1f1;
             transform: scale(1.1);
         }
 
