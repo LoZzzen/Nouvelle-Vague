@@ -145,20 +145,30 @@
     <div class="main">
 
         <h2>Nos Temps Forts</h2>
-
-        <p>Découvrez les événements à ne pas manquer cette saison !</p>
-
+<br><br><br>
+        <p>Ne manquez pas les événements incontournables de cette saison ! <br>Partez à la découverte de la ville à travers des visites fascinantes et plongez dans des activités variées pour tous les goûts.</p>
+<br><br><br><br><br>
         <div class="listeEvenement">
     <?php foreach ($lesEvenements as $evenement): ?>
+        
         <div class="evenement">
-            <h3><?= esc($evenement['nomEvenement']); ?></h3>
+            
+            <h4><?= esc($evenement['nomEvenement']); ?></h4>
+            
             <!-- Affichage de l'image -->
-            <img src="<?= base_url($evenement['image']); ?>" alt="<?= esc($evenement['nomEvenement']); ?>" style="width:100%; height:auto;">
-            <p><strong>Date :</strong> <?= esc($evenement['dateEvenement']); ?></p>
-            <p><strong>Lieu :</strong> <?= esc($evenement['lieu']); ?></p>
-            <p><strong>Description :</strong> <?= esc($evenement['description']); ?></p>
+            <a href="<?= esc($evenement['lienPhp']); ?>" target="_blank">
+                <img src="<?= base_url($evenement['image']); ?>" alt="<?= esc($evenement['nomEvenement']); ?>" style="width:100%; height:auto;">
+            </a>
+            
+            <!-- <img src="<?= base_url($evenement['image']); ?>" alt="<?= esc($evenement['nomEvenement']); ?>" style="width:100%; height:auto;"> -->
+            
+            <!-- <p><strong>Date :</strong> <?= esc($evenement['dateEvenement']); ?></p> -->
+            <!-- <p><strong>Lieu :</strong> <?= esc($evenement['lieu']); ?></p> -->
+            <!-- <p><strong>Description :</strong> <?= esc($evenement['description']); ?></p> -->
         </div>
+
     <?php endforeach; ?>
+
 </div>
 
     </div>
