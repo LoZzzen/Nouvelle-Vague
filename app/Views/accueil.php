@@ -50,6 +50,9 @@
 
         nav li {
             margin: 0 20px;
+        }
+
+        nav a {
             text-decoration: none;
             color: #333;
             font-size: 1.2em;
@@ -57,18 +60,10 @@
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
-        /* nav li {
-            text-decoration: none;
-            color: #333;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: color 0.3s ease, transform 0.3s ease;
-        } */
-/* 
         nav a:hover {
-            color:rgb(9, 9, 9);
+            color: rgb(9, 9, 9);
             transform: scale(1.1);
-        } */
+        }
 
         /* section principale */
         .main {
@@ -126,7 +121,7 @@
         <br> <br>
         <li>
             <?php
-                 echo anchor('MonControleur/lesTF', ' Temp Fort'); 
+                 echo anchor('MonControleur/lesTF', ' Temp Forts'); 
             ?>
         </li>
         <br> <br>

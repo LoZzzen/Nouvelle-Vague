@@ -72,26 +72,26 @@
             color: #333;
         }
 
-        .event-list {
+        .listeEvenement {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;
             margin-top: 30px;
         }
 
-        .event-card {
+        .evenement {
             background-color: #f4f4f4;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .event-card h3 {
+        .evenement h3 {
             font-size: 1.8em;
             color: #333;
         }
 
-        .event-card p {
+        .evenement p {
             font-size: 1.1em;
             color: #555;
         }
@@ -117,7 +117,7 @@
 <body>
     <!-- en-tête -->
     <header>
-        <h1>LES TEMPS FORT</h1>
+        <h1>LES TEMPS FORTS</h1>
     </header>
     <!-- barre de navigation -->
     <nav>
@@ -130,7 +130,7 @@
         <br> <br>
         <li>
             <?php
-                 echo anchor('MonControleur/lesTF', ' Temp Fort'); 
+                 echo anchor('MonControleur/lesTF', ' Temp Forts'); 
             ?>
         </li>
         <br> <br>
@@ -148,9 +148,9 @@
 
         <p>Découvrez les événements à ne pas manquer cette saison !</p>
 
-        <div class="event-list">
+        <div class="listeEvenement">
     <?php foreach ($lesEvenements as $evenement): ?>
-        <div class="event-card">
+        <div class="evenement">
             <h3><?= esc($evenement['nomEvenement']); ?></h3>
             <!-- Affichage de l'image -->
             <img src="<?= base_url($evenement['image']); ?>" alt="<?= esc($evenement['nomEvenement']); ?>" style="width:100%; height:auto;">
