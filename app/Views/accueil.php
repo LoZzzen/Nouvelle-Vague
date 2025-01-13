@@ -50,9 +50,6 @@
 
         nav li {
             margin: 0 20px;
-        }
-
-        nav a {
             text-decoration: none;
             color: #333;
             font-size: 1.2em;
@@ -60,10 +57,18 @@
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
+        /* nav li {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        } */
+/* 
         nav a:hover {
             color:rgb(9, 9, 9);
             transform: scale(1.1);
-        }
+        } */
 
         /* section principale */
         .main {
@@ -113,9 +118,23 @@
     <!-- barre de navigation -->
     <nav>
         <ul>
-            <li><a href="<?= base_url('MonControleur/index'); ?>">Accueil</a></li>
-            <li><a href="<?= base_url('MonControleur/lesTF'); ?>">Temp Fort</a></li>
-            <li><a href="<?= base_url('MonControleur/connexion'); ?>">Connexion</a></li>
+        <li>
+        <?php
+            echo anchor('MonControleur/index', ' Accueil'); 
+        ?>
+        </li>
+        <br> <br>
+        <li>
+            <?php
+                 echo anchor('MonControleur/lesTF', ' Temp Fort'); 
+            ?>
+        </li>
+        <br> <br>
+        <li>
+            <?php
+                echo anchor('MonControleur/connexion', ' Connexion'); 
+            ?>
+        </li>
         </ul>
     </nav>
 
