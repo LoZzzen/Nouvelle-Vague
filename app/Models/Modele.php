@@ -2,6 +2,10 @@
      namespace App\Models;
      use CodeIgniter\Model;
          
+
+     //ROKHIYA :
+
+
          class Modele extends Model
          {
              //Méthode pour récupérer tous les événements
@@ -13,4 +17,13 @@
                  return $query->getResultArray();
              }
          }
+
+
+
+
+    //STEPHEN :
+
+
+
+    
 ?>

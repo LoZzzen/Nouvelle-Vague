@@ -13,6 +13,11 @@ class MonControleur extends BaseController
         return view('accueil');
     }
 
+    
+    
+     //ROKHIYA : 
+
+
     /**
      * Affiche les Temps Forts avec les données des événements
      */
@@ -38,6 +43,14 @@ class MonControleur extends BaseController
 
         return view('visiteVille', $data);
     }
+
+
+
+
+
+    //STEPHEN :
+
+
     /**
      * Affiche la page de connexion
      */
