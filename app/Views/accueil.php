@@ -18,31 +18,29 @@
             flex-direction: column;
         }
 
-        /* En-tête */
-        header {
-            background: rgba(37, 85, 217, 0.85);
+         /* En-tête */
+         header {
+            background-color: #1a73e8;
             color: white;
-            padding: 30px 0;
+            padding: 40px 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            border-bottom: 2px solid #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: 2.5em;
             font-weight: bold;
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+            text-transform: uppercase;
         }
 
         /* Barre de navigation */
         nav {
-            background-color: rgba(139, 148, 202, 0.9);
+            background-color:rgb(224, 240, 238);
             display: flex;
             justify-content: center;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
         nav ul {
@@ -58,16 +56,17 @@
 
         nav a {
             text-decoration: none;
-            color: #fff;
-            font-size: 1.2em;
-            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+            font-weight: 500;
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
         nav a:hover {
-            color: #f1f1f1;
+            color: #1a73e8;
             transform: scale(1.1);
         }
+
 
         /* Section principale */
         .main {
@@ -181,7 +180,7 @@
 
     <!-- Pied de page -->
     <footer>
-        <p>&copy; 2025 NOUVELLE VAGUE. Tous droits réservés.</p>
+        <p>&copy; 2025 NOUVELLE VAGUE</p>
     </footer>
 
 </body>

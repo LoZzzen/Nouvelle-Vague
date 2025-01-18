@@ -33,16 +33,12 @@ class MonControleur extends BaseController
         return view('tempFort', $data);
     }
 
-    public function visiteVille()
+    public function inscriTF()
     {
-        // Charger le modèle
-        $monmodel = new Modele();
-
-        // Récupérer les événements depuis la base de données
-        $data['lesEvenements'] = $monmodel->getEvenements();
-
-        return view('visiteVille', $data);
+        
+        echo view('inscriTF');
     }
+   
 
 
 

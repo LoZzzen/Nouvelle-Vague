@@ -88,3 +88,12 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
 CRITICAL - 2025-01-13 13:14:42 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
 in APPPATH\Models\Modele.php on line 2.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-13 19:03:04 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\MonControleur.php(60): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->connexion()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -169,3 +169,12 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
  5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-18 21:07:08 --> syntax error, unexpected token "=", expecting identifier
+in APPPATH\Views\tempFort.php on line 197.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('tempFort', [], true)
+ 3 APPPATH\Controllers\MonControleur.php(33): view('tempFort', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->lesTF()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

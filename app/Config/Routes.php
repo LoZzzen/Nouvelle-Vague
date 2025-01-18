@@ -15,7 +15,7 @@ $routes->get('/MonControleur/index', 'MonControleur::index');
 //ROKHIYA : 
 
 $routes->get('/MonControleur/lesTF', 'MonControleur::lesTF');
-$routes->get('/MonControleur/visiteVille', 'MonControleur::visiteVille');
+$routes->get('/MonControleur/inscriTF', 'MonControleur::inscriTF');
 
 
 

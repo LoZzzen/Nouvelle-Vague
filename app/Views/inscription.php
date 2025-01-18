@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +10,9 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: "Arial", sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             color: #333;
-            background: linear-gradient(135deg,#aed8f380, #02074a);
-            background-size: cover;
+            background-color: #f4f4f4;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -19,29 +20,27 @@
 
         /* En-tête */
         header {
-            background: rgba(37, 85, 217, 0.85);
+            background-color: #1a73e8;
             color: white;
-            padding: 30px 0;
+            padding: 40px 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            border-bottom: 2px solid #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: 2.5em;
             font-weight: bold;
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+            text-transform: uppercase;
         }
 
         /* Barre de navigation */
         nav {
-            background-color: rgba(139, 148, 202, 0.9);
+            background-color:rgb(224, 240, 238);
             display: flex;
             justify-content: center;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
         nav ul {
@@ -57,103 +56,129 @@
 
         nav a {
             text-decoration: none;
-            color: #fff;
-            font-size: 1.2em;
-            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+            font-weight: 500;
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
         nav a:hover {
-            color: #f1f1f1;
+            color: #1a73e8;
             transform: scale(1.1);
         }
 
-.container {
-    max-width: 700px;
-    width: 100%;
-    background: white;
-    padding: 25px 30px;
-    border-radius: 5px;
-    background: linear-gradient(135deg,#aed8f380, #02074a);
-}
-.registre {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background: linear-gradient(135deg,#aed8f380, #02074a);
-}
+        /* Formulaire */
+        .registre {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #fafafa;
+        }
 
-.user-elements {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: space-between;
-}
+        .conteneur {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
 
-.input-boite {
-    margin-bottom: 15px;
-    width: calc(100% / 2 - 20px);
-    
-}
+        .champ-entrée {
+            margin-bottom: 20px;
+            width: 100%;
+        }
 
-.detail{
-    display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-.input-boite input {
-    height: 45px;
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    border: 1px outset;
-    padding-left: 15px;
-    font-size: 15px;
-    border-top-width: 3px;
-    border-left-width: 3px;
-    
-}
+        .détail {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
 
-/* .input-boite input:focus,
-.input-boite input:valid {
-    border-color: #02074a
-} */
+        .champ-entrée input {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+        }
 
-.boutton {
-    height: 50px;
-    margin: 50px 0;
-}
+        .champ-entrée input:focus {
+            border-color: #1a73e8;
+        }
 
-.boutton input {
-    height: 100%;
-    width: 100%;
-    background:linear-gradient(135deg,#4491c580, #02074a); ;
-}
+        .bouton {
+            height: 50px;
+            margin: 30px 0;
+        }
 
+        .bouton input {
+            height: 100%;
+            width: 100%;
+            background-color: #1a73e8;
+            border: none;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+        .bouton input:hover {
+            background-color: #155db3;
+        }
+
+        /* Pied de page */
+        footer {
+            background: linear-gradient(to right, rgb(144, 184, 238), rgb(69, 110, 221));
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
             header h1 {
-                font-size: 2.4em;
+                font-size: 2.2em;
             }
 
             nav ul {
                 flex-direction: column;
+                align-items: center;
             }
 
-            .main {
-                padding: 30px 20px;
+            .conteneur {
                 width: 90%;
+                padding: 25px;
             }
 
-            .cta-button {
+            .champ-entrée input {
+                font-size: 14px;
+            }
+
+            .bouton input {
                 font-size: 1em;
-                padding: 10px 25px;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- En-tête -->
     <header>
@@ -164,50 +189,57 @@
     <nav>
         <ul>
             <li>
-                <?php
-                    echo anchor('MonControleur/index', 'Accueil');
-                ?>
+                <?php echo anchor('MonControleur/index', 'Accueil'); ?>
             </li>
             <li>
-                <?php
-                    echo anchor('MonControleur/lesTF', 'Temp Forts');
-                ?>
+                <?php echo anchor('MonControleur/lesTF', 'Temp Forts'); ?>
             </li>
             <li>
-                <?php
-                    echo anchor('MonControleur/connexion', 'Connexion');
-                ?>
+                <?php echo anchor('MonControleur/connexion', 'Connexion'); ?>
             </li>
         </ul>
     </nav>
-    
+
+    <!-- Formulaire d'inscription -->
     <div class="registre">
-        <div class="container">
-            <?=validation_list_errors() ?>
-                <?= form_open('/MonControleur/valideFormulaire'); ?>
-                <div class="user-elements">
-                    <div class="input-boite">
-                            <?= form_label('Nom : '); ?>
-                                <?php echo form_input('Nom', set_value('Nom')); ?> <br /><br />
-                    </div>
-                    <div class="input-boite">
-                            <?= form_label('Prenom : '); ?>
-                                <?php echo form_input('Prenom', set_value('Prenom')); ?> <br /><br />
-                    </div>
-                    <div class="input-boite">    
-                        <?= form_label('Login : '); ?>
-                                <?php echo form_input('Login', set_value('Login')); ?> <br /><br />
-                    </div>
-                    <div class="input-boite">
-                            <?= form_label('Password : '); ?>
-                                <?php echo form_input('password', set_value('password')); ?> <br /><br />
-                    </div>
-                </div>
-                <div class="boutton">
-                    <?php echo form_submit('mysubmit', 'Valider'); ?>
-                </div>
+
+        <div class="conteneur">
+
+            <?= validation_list_errors() ?>
+
+            <?= form_open('/MonControleur/valideFormulaire'); ?>
+
+            <div class="éléments-utilisateur">
+                <div class="champ-entrée">
+                    <?= form_label('Nom : ') ?>
+                    <?php echo form_input('Nom', set_value('Nom')); ?>
+            </div>
+
+            <div class="champ-entrée">
+                    <?= form_label('Prénom : ') ?>
+                    <?php echo form_input('Prenom', set_value('Prenom')); ?>
+            <br><br>
+                    <?= form_label('Login : ') ?>
+                    <?php echo form_input('Login', set_value('Login')); ?>
+            <br><br>
+                    <?= form_label('Mot de passe : ') ?>
+                    <?php echo form_input('password', set_value('password')); ?>
+            </div>
+
+            <br><br>
+
+            <div class="bouton">
+                <?php echo form_submit('mysubmit', 'Valider'); ?>
+            </div>
+
             <?= form_close(); ?>
         </div>
     </div>
+
+        <!-- Pied de page -->
+        <footer>
+            <p>&copy; 2025 NOUVELLE VAGUE</p>
+        </footer>
 </body>
+
 </html>
