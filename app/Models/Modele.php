@@ -1,14 +1,10 @@
 <?php
      namespace App\Models;
      use CodeIgniter\Model;
-         
-
-     //ROKHIYA :
-
-
          class Modele extends Model
-         {
-             //Méthode pour récupérer tous les événements
+         {    
+            //ROKHIYA :
+            //Méthode pour récupérer tous les événements
              public function getEvenements() {
                  $db = \Config\Database::connect();
                  $builder = $db->table('evenement');
@@ -16,14 +12,39 @@
                  $db->close();
                  return $query->getResultArray();
              }
-         }
+         
+         
+         
+         
+         
+             //STEPHEN :
+             //Méthode d'inscription
+            public function insertArrivant($nom, $prenom, $log, $mdp) {
+                $db = \Config\Database::connect(); // Connexion à la base de données
+            
+                // Requête préparée avec des placeholders
+                $sql = "INSERT INTO utilisateur (nom, prenom, login, mdp, role) VALUES (?, ?, ?, ?, ?)";
+            
+                // Utilisation de la méthode "query" avec des données sécurisées
+                $result = $db->query($sql, [$nom, $prenom, $log, $mdp, 'Arrivant']);
+            
+                $db->close(); // Fermeture de la connexion
+                return $result;
+            }
 
-
-
-
-    //STEPHEN :
-
-
-
-    
+                //Méthode de connexion
+            public function connexionArrivant($log, $mdp) {
+                $db = \Config\Database::connect(); // Connexion à la base de données
+            
+                // Requête préparée avec des placeholders
+                $sql = "SELECT * FROM utilisateur WHERE login = ? AND mdp = ? AND role = 'Arrivant'";
+            
+                // Utilisation de la méthode "query" avec des données sécurisées
+                $result = $db->query($sql, [$log, $mdp, 'Arrivant']);
+            
+                $db->close(); // Fermeture de la connexion
+                return $result;
+            }
+           
+        }    
 ?>

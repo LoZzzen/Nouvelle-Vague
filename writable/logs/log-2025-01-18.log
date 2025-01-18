@@ -1,0 +1,171 @@
+CRITICAL - 2025-01-18 12:37:07 --> Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\MonControleur.php(60): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->connexion()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-18 15:11:50 --> "min-length" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 319.
+ 1 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min-length')
+ 2 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', 'azertyu', [...], [...])
+ 3 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\MonControleur.php(79): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-18 15:13:47 --> Undefined variable $log
+in APPPATH\Controllers\MonControleur.php on line 86.
+ 1 APPPATH\Controllers\MonControleur.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $log', 'C:\\wamp64\\www\\NVLVAGUE\\Nouvelle-Vague\\app\\Controllers\\MonControleur.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-18 15:14:26 --> mysqli_sql_exception: Erreur de syntaxe près de 'Stephen','slosio', 'azerty25','Arrivant')' à la ligne 1 in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO Ign...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO Ign...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO Ign...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('INSERT INTO Ign...')
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(87): App\Models\Modele->insertContact('Losio', 'Stephen', 'slosio', 'azerty25')
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-01-18 15:14:26 --> Erreur de syntaxe près de 'Stephen','slosio', 'azerty25','Arrivant')' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('INSERT INTO Igniter (nom, prenom, login, mdp) VALUES(\'Losio,\'Stephen\',\'slosio\', \'azerty25\',\'Arrivant\')')
+ 2 APPPATH\Controllers\MonControleur.php(87): App\Models\Modele->insertContact('Losio', 'Stephen', 'slosio', 'azerty25')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-18 15:16:07 --> mysqli_sql_exception: Erreur de syntaxe près de 'Stephen','slosio','azerty25','Arrivant')' à la ligne 1 in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO uti...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO uti...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO uti...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('INSERT INTO uti...')
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(87): App\Models\Modele->insertContact('Losio', 'Stephen', 'slosio', 'azerty25')
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-01-18 15:16:07 --> Erreur de syntaxe près de 'Stephen','slosio','azerty25','Arrivant')' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('INSERT INTO utilisateur (nom, prenom, login, mdp, role) VALUES(\'Losio,\'Stephen\',\'slosio\',\'azerty25\',\'Arrivant\')')
+ 2 APPPATH\Controllers\MonControleur.php(87): App\Models\Modele->insertContact('Losio', 'Stephen', 'slosio', 'azerty25')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-18 15:19:50 --> syntax error, unexpected identifier "Arrivant"
+in APPPATH\Models\Modele.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NVLVAGUE\\Nouvelle-Vague\\app\\Models\\Modele.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Modele')
+ 3 APPPATH\Controllers\MonControleur.php(80): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Modele')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-18 15:22:44 --> mysqli_sql_exception: Erreur de syntaxe près de 'Stephen','slosio','azerty25','Arrivant')' à la ligne 1 in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO uti...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO uti...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO uti...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(25): CodeIgniter\Database\BaseConnection->query('INSERT INTO uti...')
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(87): App\Models\Modele->insertContact('Losio', 'Stephen', 'slosio', 'azerty25')
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-01-18 15:22:44 --> Erreur de syntaxe près de 'Stephen','slosio','azerty25','Arrivant')' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(25): CodeIgniter\Database\BaseConnection->query('INSERT INTO utilisateur (nom, prenom, login, mdp, role) VALUES(\'Losio,\'Stephen\',\'slosio\',\'azerty25\',\'Arrivant\')')
+ 2 APPPATH\Controllers\MonControleur.php(87): App\Models\Modele->insertContact('Losio', 'Stephen', 'slosio', 'azerty25')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-18 15:36:38 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\MonControleur.php(86): CodeIgniter\Model->__call('insertContact', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-18 15:39:48 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\MonControleur.php(86): CodeIgniter\Model->__call('insertContact', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->valideFormulaire()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-18 15:48:55 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\MonControleur.php(101): CodeIgniter\Model->__call('getUserByLogin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-18 16:05:40 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\MonControleur.php on line 103.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\NVLVAGUE\\Nouvelle-Vague\\app\\Controllers\\MonControleur.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\MonControleur')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\MonControleur')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\MonControleur', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-18 16:08:08 --> mysqli_sql_exception: Erreur de syntaxe près de '? AND mdp = ? AND statut = 'Arrivant'' à la ligne 1 in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM u...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(43): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...', Array)
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(102): App\Models\Modele->connexionArrivant('slosio', '$2y$10$RvjuCzyV...')
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-01-18 16:08:08 --> Erreur de syntaxe près de '? AND mdp = ? AND statut = 'Arrivant'' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(43): CodeIgniter\Database\BaseConnection->query('SELECT * FROM utilisateur WHERE login = ? AND mdp = ? AND statut = \'Arrivant\'', [...])
+ 2 APPPATH\Controllers\MonControleur.php(102): App\Models\Modele->connexionArrivant('slosio', '$2y$10$RvjuCzyVc/lFJXLxwO/Z.u7m6kz6eBEXh0IqptPONKEg02wkw9Ad2')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-18 16:11:59 --> mysqli_sql_exception: Erreur de syntaxe près de '? AND mdp = ? AND role = 'Arrivant'' à la ligne 1 in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM u...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(43): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...', Array)
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(102): App\Models\Modele->connexionArrivant('slosio', '$2y$10$hEegLfWs...')
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-01-18 16:11:59 --> Erreur de syntaxe près de '? AND mdp = ? AND role = 'Arrivant'' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(43): CodeIgniter\Database\BaseConnection->query('SELECT * FROM utilisateur WHERE login = ? AND mdp = ? AND role = \'Arrivant\'', [...])
+ 2 APPPATH\Controllers\MonControleur.php(102): App\Models\Modele->connexionArrivant('slosio', '$2y$10$hEegLfWsvLVpK3qhtwkDgu5JF6dewX0XLb5DtGUMVMvzu78J1WQUi')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -23,3 +23,7 @@ $routes->get('/MonControleur/visiteVille', 'MonControleur::visiteVille');
 
 
 $routes->get('/MonControleur/connexion', 'MonControleur::connexion');
+$routes->get('/MonControleur/inscription', 'MonControleur::inscription');
+
+$routes->post('/MonControleur/valideFormulaire', 'MonControleur::valideFormulaire');
+$routes->post('/MonControleur/validConnexion', 'MonControleur::validConnexion');
