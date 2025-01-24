@@ -123,6 +123,74 @@
             font-size: 0.9em;
             letter-spacing: 0.5px;
         }
+        
+        /* Formulaire */
+        .registre {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #fafafa;
+        }
+
+        .conteneur {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .champ-entrée {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .détail {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .champ-entrée input {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        .champ-entrée input:focus {
+            border-color: #1a73e8;
+        }
+
+        .bouton {
+            height: 50px;
+            margin: 30px 0;
+        }
+
+        .bouton input {
+            height: 100%;
+            width: 100%;
+            background-color: #1a73e8;
+            border: none;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .bouton input:hover {
+            background-color: #155db3;
+        }
+        
 
         /* bouton */
         .inscription-bouton {
@@ -167,10 +235,59 @@
                 echo anchor('MonControleur/connexion', ' Connexion'); 
             ?>
         </li>
+        <li>
+            <?php $session = \Config\Services::session(); 
+             if($session->get('login')){
+                echo anchor('MonControleur/reserv', ' Réservation');
+                }
+                ?> 
+        </li>
         </ul>
     </nav>
 
 </div>
+
+        <!-- Formulaire d'inscription -->
+    <div class="registre">
+
+        <div class="conteneur">
+        <!-- menu deroulant pour les evenements -->
+        <label for="evenement">Choisissez un événement :</label>
+            <select name="evenement" id="evenement">
+                <?php foreach ($lesEvenements as $evenement): ?>
+                <option value="<?= esc($evenement['idEvenement']); ?>">
+                <?= esc($evenement['nomEvenement']); ?>
+                </option>
+                <?php endforeach; ?>
+            </select>
+
+            <?= validation_list_errors() ?>
+            <?= form_open('/MonControleur/validTF'); ?>
+            <div class="éléments-utilisateur">
+                <div class="champ-entrée">
+                    <?= form_label('Nom : ') ?>
+                    <?php echo form_input('Nom', set_value('Nom')); ?>
+            </div>
+
+            <div class="champ-entrée">
+                    <?= form_label('Prénom : ') ?>
+                    <?php echo form_input('Prenom', set_value('Prenom')); ?>
+                <!-- menu deroulant pour le nombre de place-->
+            </div>
+                <label for="places">Nombre de places :</label>
+                <select name="places" id="places">
+                <?php for ($i = 1; $i <= 10; $i++): ?>
+                <option value="<?= $i; ?>"><?= $i; ?></option>
+                <?php endfor; ?>
+                </select>
+            <br><br>
+            <div class="bouton">
+                <?php echo form_submit('mysubmit', 'Valider'); ?>
+            </div>
+
+            <?= form_close(); ?>
+        </div>
+    </div>
 
     </div>
     <!-- pied de page -->

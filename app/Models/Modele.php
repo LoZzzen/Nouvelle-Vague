@@ -33,17 +33,22 @@
             }
 
                 //Méthode de connexion
-            public function connexionArrivant($log, $mdp) {
+            public function connexion($log, $mdp) {
                 $db = \Config\Database::connect(); // Connexion à la base de données
             
                 // Requête préparée avec des placeholders
-                $sql = "SELECT * FROM utilisateur WHERE login = ? AND mdp = ? AND role = 'Arrivant'";
+                $sql = "SELECT * FROM utilisateur WHERE login = ? AND mdp = ?";
             
                 // Utilisation de la méthode "query" avec des données sécurisées
-                $result = $db->query($sql, [$log, $mdp, 'Arrivant']);
+                $result = $db->query($sql, [$log, $mdp]);
             
                 $db->close(); // Fermeture de la connexion
                 return $result;
+            }
+            public function inscriTF(){
+                $db = \Config\Database::connect();
+                $sql = "INSERT INTO reservation (dateDebut, dateFin, idUtilisateur, idEvenement) VALUES (?, ?, ?, ?, ?)";
+
             }
            
         }    

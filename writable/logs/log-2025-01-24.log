@@ -1,0 +1,85 @@
+ERROR - 2025-01-24 09:31:41 --> mysqli_sql_exception: Erreur de syntaxe près de '? AND mdp = ? AND role = 'Arrivant'' à la ligne 1 in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM u...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(43): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...', Array)
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(102): App\Models\Modele->connexionArrivant('slosio', 'azerty25')
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-01-24 09:31:41 --> Erreur de syntaxe près de '? AND mdp = ? AND role = 'Arrivant'' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(43): CodeIgniter\Database\BaseConnection->query('SELECT * FROM utilisateur WHERE login = ? AND mdp = ? AND role = \'Arrivant\'', [...])
+ 2 APPPATH\Controllers\MonControleur.php(102): App\Models\Modele->connexionArrivant('slosio', 'azerty25')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-24 09:32:56 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\MonControleur.php on line 106.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-24 09:33:21 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\MonControleur.php on line 106.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-24 09:33:59 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\MonControleur.php on line 106.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-24 09:37:14 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\MonControleur.php on line 100.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-24 10:12:47 --> Undefined variable $evenement
+in APPPATH\Views\inscriTF.php on line 248.
+ 1 APPPATH\Views\inscriTF.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $evenement', 'C:\\wamp64\\www\\NVLVAGUE\\Nouvelle-Vague\\app\\Views\\inscriTF.php', 248)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NVLVAGUE\\Nouvelle-Vague\\app\\Views\\inscriTF.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('inscriTF', [], true)
+ 5 APPPATH\Controllers\MonControleur.php(43): view('inscriTF', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->inscriTF()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-24 10:56:01 --> Undefined variable $evenement
+in APPPATH\Views\inscriTF.php on line 248.
+ 1 APPPATH\Views\inscriTF.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $evenement', 'C:\\wamp64\\www\\NVLVAGUE\\Nouvelle-Vague\\app\\Views\\inscriTF.php', 248)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\NVLVAGUE\\Nouvelle-Vague\\app\\Views\\inscriTF.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('inscriTF', [], true)
+ 5 APPPATH\Controllers\MonControleur.php(43): view('inscriTF', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->inscriTF()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-24 11:24:14 --> Undefined variable $rules
+in APPPATH\Controllers\MonControleur.php on line 96.
+ 1 APPPATH\Controllers\MonControleur.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rules', 'C:\\wamp64\\www\\NVLVAGUE\\Nouvelle-Vague\\app\\Controllers\\MonControleur.php', 96)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-24 12:19:27 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH\Views\tempFort.php on line 160.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-24 12:31:18 --> Invalid file: "accueil2.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('accueil2.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('accueil2', [], true)
+ 3 APPPATH\Controllers\MonControleur.php(113): view('accueil2')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->validConnexion()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

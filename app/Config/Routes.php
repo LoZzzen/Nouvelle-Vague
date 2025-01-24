@@ -16,6 +16,7 @@ $routes->get('/MonControleur/index', 'MonControleur::index');
 
 $routes->get('/MonControleur/lesTF', 'MonControleur::lesTF');
 $routes->get('/MonControleur/inscriTF', 'MonControleur::inscriTF');
+$routes->get('/MonControleur/reserv', 'MonControleur::reserv');
 
 
 
@@ -27,3 +28,5 @@ $routes->get('/MonControleur/inscription', 'MonControleur::inscription');
 
 $routes->post('/MonControleur/valideFormulaire', 'MonControleur::valideFormulaire');
 $routes->post('/MonControleur/validConnexion', 'MonControleur::validConnexion');
+
+$routes->get('/MonControleur/deconnexion', 'MonControleur::deconnexion');

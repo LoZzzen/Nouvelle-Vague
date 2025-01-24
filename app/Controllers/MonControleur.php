@@ -35,8 +35,17 @@ class MonControleur extends BaseController
 
     public function inscriTF()
     {
+        $monmodel = new Modele();
+
+        // Récupérer les événements depuis la base de données
+        $data['lesEvenements'] = $monmodel->getEvenements();
         
-        echo view('inscriTF');
+        return view('inscriTF', $data);
+    }
+
+    public function reserv(){
+        
+        echo view('reservation');
     }
    
 
@@ -63,6 +72,8 @@ class MonControleur extends BaseController
         //echo view('index');
         echo view('inscription');
     }
+
+
     
 
     public function valideFormulaire(){      
@@ -78,28 +89,45 @@ class MonControleur extends BaseController
                 $prenom = $this->request->getVar('Prenom');           
                 $log = $this->request->getVar('Login');
                 $mdp = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
-                //echo $user."    ".$mdp. "    ".$mail;
                 $monmodel->insertArrivant($nom, $prenom, $log, $mdp);
-                return view('accueil');         
+
+                return view('connexion');         
             }
             else{
                 return view('inscription');          
             }
     }
     
-    public function validConnexion()
-    {
-    // Vérifie si le formulaire est soumis
-    if ($this->request->is('post')) {
-        $monmodel = new \App\Models\Modele();
-        $login = $this->request->getVar('Login');
-        $password = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
+    public function validConnexion() {
+        if($this->request->is('post')){
+                $monmodel = new \App\Models\Modele();
+                $login = $this->request->getVar('Login');
+                $mdp = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
+                $user = $monmodel->connexion($login, $mdp);
+
+                if ($user) {
+                    // Démarrer la session
+                    $session = \Config\Services::session();
+                    $session->set('login', $login); // Crée une variable de session avec le login
         
-        $monmodel->connexionArrivant($login,$password);
-            return view('accueil');
-        }else {
-            // Afficher une erreur si la connexion échoue
-            return view('connexion');
+                    return view('accueil'); // Rediriger vers la page d'accueil
+                }else {
+                return view('connexion');          
+                } 
         }
+    }
+    public function validTF(){
+        
+    }
+
+    public function deconnexion() {
+        // Charger le service de session
+        $session = \Config\Services::session();
+    
+        // Détruire la session
+        $session->destroy();
+    
+        // Rediriger vers la page de connexion ou une autre page
+        return view('inscription');
     }
 }  

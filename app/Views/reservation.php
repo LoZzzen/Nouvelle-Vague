@@ -66,40 +66,6 @@
             color: #1a73e8;
             transform: scale(1.1);
         }
-
-
-        /* Section principale */
-        .main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 60px 50px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.9);
-            margin: 40px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            max-width: 900px;
-        }
-
-        .main h2 {
-            font-size: 2.2em;
-            margin-bottom: 15px;
-            color: #333;
-            font-weight: 600;
-        }
-
-        .main p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 25px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
         /* Pied de page */
         footer {
             background: linear-gradient(to right, rgb(144, 184, 238), rgb(69, 110, 221));
@@ -138,13 +104,13 @@
                 padding: 10px 25px;
             }
         }
-    </style>
+</style>
 </head>
 <body>
 
     <!-- En-tête -->
     <header>
-        <h1>NOUVELLE VAGUE</h1>
+        <h1>RESERVATION</h1>
     </header>
 
     <!-- Barre de navigation -->
@@ -175,18 +141,8 @@
         </ul>
     </nav>
 
-    <!-- Section principale -->
-    <div class="main">
-        <h2>Bienvenue sur le site de NOUVELLE VAGUE</h2>
-        <p>
-            Découvrez nos activités estivales, explorez de nouvelles aventures, et profitez du meilleur de la saison ! 
-            Nous sommes heureux de vous accueillir dans cet espace de détente et de plaisir, ici à GETCET.
-        </p>
-        
-    </div>
-
-    <!-- Pied de page -->
-    <footer>
+ <!-- Pied de page -->
+ <footer>
         <p>&copy; 2025 NOUVELLE VAGUE</p>
     </footer>
 

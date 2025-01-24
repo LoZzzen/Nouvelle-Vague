@@ -182,7 +182,7 @@
 <body>
     <!-- En-tête -->
     <header>
-        <h1>NOUVELLE VAGUE</h1>
+        <h1>INSCRIPTION</h1>
     </header>
 
     <!-- Barre de navigation -->
@@ -196,6 +196,13 @@
             </li>
             <li>
                 <?php echo anchor('MonControleur/connexion', 'Connexion'); ?>
+            </li>
+            <li>
+                <?php $session = \Config\Services::session(); 
+                    if($session->get('login')){
+                        echo anchor('MonControleur/reserv', ' Réservation');
+                    }
+                ?> 
             </li>
         </ul>
     </nav>
