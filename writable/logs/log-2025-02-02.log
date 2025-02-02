@@ -1,0 +1,85 @@
+CRITICAL - 2025-02-02 16:48:36 --> Call to a member function get() on string
+in APPPATH\Models\Modele.php on line 22.
+ 1 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-02 17:37:11 --> Too few arguments to function App\Models\Modele::getReserv(), 0 passed in C:\wamp64\www\Nouvelle-Vague\app\Controllers\MonControleur.php on line 52 and exactly 5 expected
+in APPPATH\Models\Modele.php on line 16.
+ 1 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-02 17:38:10 --> Call to a member function get() on string
+in APPPATH\Models\Modele.php on line 22.
+ 1 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-02 17:40:05 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::sclose()
+in APPPATH\Models\Modele.php on line 24.
+ 1 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-02 17:48:27 --> syntax error, unexpected token ",", expecting ")"
+in APPPATH\Models\Modele.php on line 23.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\Nouvelle-Vague\\app\\Models\\Modele.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Modele')
+ 3 APPPATH\Controllers\MonControleur.php(49): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Modele')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-02 17:49:01 --> Undefined variable $userId
+in APPPATH\Models\Modele.php on line 23.
+ 1 APPPATH\Models\Modele.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userId', 'C:\\wamp64\\www\\Nouvelle-Vague\\app\\Models\\Modele.php', 23)
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-02 17:49:43 --> Undefined variable $idUtilisateur
+in APPPATH\Models\Modele.php on line 23.
+ 1 APPPATH\Models\Modele.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idUtilisateur', 'C:\\wamp64\\www\\Nouvelle-Vague\\app\\Models\\Modele.php', 23)
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-02 17:49:44 --> Undefined variable $idUtilisateur
+in APPPATH\Models\Modele.php on line 23.
+ 1 APPPATH\Models\Modele.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idUtilisateur', 'C:\\wamp64\\www\\Nouvelle-Vague\\app\\Models\\Modele.php', 23)
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-02 17:55:17 --> mysqli_sql_exception: Erreur de syntaxe près de '?' à la ligne 5 in C:\wamp64\www\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT nom, pre...', 0)
+#1 C:\wamp64\www\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nom, pre...')
+#2 C:\wamp64\www\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nom, pre...')
+#3 C:\wamp64\www\Nouvelle-Vague\app\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, pre...')
+#4 C:\wamp64\www\Nouvelle-Vague\app\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+#5 C:\wamp64\www\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+#6 C:\wamp64\www\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-02-02 17:55:17 --> Erreur de syntaxe près de '?' à la ligne 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, prenom, nomEvenement, dateEvenement, nbPlaceR 
+                FROM utilisateur, evenement, reservation 
+                WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
+                AND evenement.idEvenement = reservation.idEvenement
+                AND reservation.idUtilisateur = ?')
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

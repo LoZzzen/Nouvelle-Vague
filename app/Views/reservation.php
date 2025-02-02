@@ -104,6 +104,8 @@
                 padding: 10px 25px;
             }
         }
+
+        
 </style>
 </head>
 <body>
@@ -131,15 +133,22 @@
                     echo anchor('MonControleur/connexion', 'Connexion');
                 ?>
             </li>
-            <li>
-            <?php $session = \Config\Services::session(); 
-             if($session->get('login')){
-                echo anchor('MonControleur/reserv', ' Réservation');
-                }
-                ?> 
-            </li>
         </ul>
     </nav>
+
+    <div class="listeReservation">
+            <?php foreach ($lesReserv as $reservation): ?>
+            <div class="reservation">
+
+                <p><strong>Nom :</strong> <?= esc($reservation['nom']); ?></p>
+                <p><strong>Prenom :</strong> <?= esc($reservation['prenom']); ?></p>
+                <p><strong>Evenement :</strong> <?= esc($reservation['nomEvenement']); ?></p>
+                <p><strong>Date :</strong> <?= esc($reservation['dateEvenement']); ?></p>
+                <p><strong>Nombre de Place Reservé :</strong> <?= esc($reservation['nbPlaceR']); ?></p>
+
+            </div>
+            <?php endforeach; ?>
+        </div>
 
  <!-- Pied de page -->
  <footer>

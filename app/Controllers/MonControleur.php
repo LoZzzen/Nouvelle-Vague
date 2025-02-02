@@ -5,6 +5,11 @@ use App\Models\Modele;
 
 class MonControleur extends BaseController
 {
+
+    
+    
+     //ROKHIYA : 
+
     /**
      * Affiche la page d'accueil
      */
@@ -12,11 +17,6 @@ class MonControleur extends BaseController
     {
         return view('accueil');
     }
-
-    
-    
-     //ROKHIYA : 
-
 
     /**
      * Affiche les Temps Forts avec les données des événements
@@ -33,6 +33,7 @@ class MonControleur extends BaseController
         return view('tempFort', $data);
     }
 
+    //Affiche le formulaire d'inscription aux TF
     public function inscriTF()
     {
         $monmodel = new Modele();
@@ -43,9 +44,14 @@ class MonControleur extends BaseController
         return view('inscriTF', $data);
     }
 
+    //Affiche la reservation des utilistaeurs des TF
     public function reserv(){
-        
-        echo view('reservation');
+        $monmodel = new Modele();
+
+        // Récupérer les événements depuis la base de données
+        $data['lesReserv'] = $monmodel->getReserv();
+
+        echo view('reservation',$data);
     }
    
 
