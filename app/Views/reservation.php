@@ -18,8 +18,8 @@
             flex-direction: column;
         }
 
-         /* En-tête */
-         header {
+        /* En-tête */
+        header {
             background-color: #1a73e8;
             color: white;
             padding: 40px 0;
@@ -66,6 +66,42 @@
             color: #1a73e8;
             transform: scale(1.1);
         }
+
+        /* Tableau des réservations */
+        .reservation-table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .reservation-table th,
+        .reservation-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .reservation-table th {
+            background-color: #1a73e8;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        .reservation-table td {
+            background-color: #f9f9f9;
+        }
+
+        .reservation-table tr:nth-child(even) td {
+            background-color: #f1f1f1;
+        }
+
+        .reservation-table tr:hover td {
+            background-color: #e1e1e1;
+        }
+
         /* Pied de page */
         footer {
             background: linear-gradient(to right, rgb(144, 184, 238), rgb(69, 110, 221));
@@ -103,10 +139,12 @@
                 font-size: 1em;
                 padding: 10px 25px;
             }
-        }
 
-        
-</style>
+            .reservation-table {
+                width: 95%;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -136,22 +174,34 @@
         </ul>
     </nav>
 
+    <!-- Affichage des réservations en tableau -->
     <div class="listeReservation">
-            <?php foreach ($lesReserv as $reservation): ?>
-            <div class="reservation">
+        <table class="reservation-table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Événement</th>
+                    <th>Date</th>
+                    <th>Nombre de places réservées</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($lesReserv as $reservation): ?>
+                    <tr>
+                        <td><?= esc($reservation['nom']); ?></td>
+                        <td><?= esc($reservation['prenom']); ?></td>
+                        <td><?= esc($reservation['nomEvenement']); ?></td>
+                        <td><?= esc($reservation['dateEvenement']); ?></td>
+                        <td><?= esc($reservation['nbPlaceR']); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 
-                <p><strong>Nom :</strong> <?= esc($reservation['nom']); ?></p>
-                <p><strong>Prenom :</strong> <?= esc($reservation['prenom']); ?></p>
-                <p><strong>Evenement :</strong> <?= esc($reservation['nomEvenement']); ?></p>
-                <p><strong>Date :</strong> <?= esc($reservation['dateEvenement']); ?></p>
-                <p><strong>Nombre de Place Reservé :</strong> <?= esc($reservation['nbPlaceR']); ?></p>
-
-            </div>
-            <?php endforeach; ?>
-        </div>
-
- <!-- Pied de page -->
- <footer>
+    <!-- Pied de page -->
+    <footer>
         <p>&copy; 2025 NOUVELLE VAGUE</p>
     </footer>
 
