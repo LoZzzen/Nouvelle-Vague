@@ -21,8 +21,6 @@ $routes->get('/MonControleur/reserv', 'MonControleur::reserv');
 
 
 //STEPHEN : 
-
-
 $routes->get('/MonControleur/connexion', 'MonControleur::connexion');
 $routes->get('/MonControleur/inscription', 'MonControleur::inscription');
 
@@ -30,3 +28,5 @@ $routes->post('/MonControleur/valideFormulaire', 'MonControleur::valideFormulair
 $routes->post('/MonControleur/validConnexion', 'MonControleur::validConnexion');
 
 $routes->get('/MonControleur/deconnexion', 'MonControleur::deconnexion');
+
+$routes->post('/MonControleur/validTF', 'MonControleur::validTF');

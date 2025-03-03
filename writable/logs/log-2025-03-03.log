@@ -1,0 +1,153 @@
+ERROR - 2025-03-03 14:00:12 --> mysqli_sql_exception: Champ 'nbPlaceR' inconnu dans field list in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT nom, pre...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nom, pre...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nom, pre...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, pre...')
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-03-03 14:00:12 --> Champ 'nbPlaceR' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, prenom, nomEvenement, dateEvenement, nbPlaceR 
+                FROM utilisateur, evenement, reservation 
+                WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
+                AND evenement.idEvenement = reservation.idEvenement
+                AND reservation.idUtilisateur = 2')
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 14:00:35 --> mysqli_sql_exception: Champ 'nbPlaceR' inconnu dans field list in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT nom, pre...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nom, pre...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nom, pre...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, pre...')
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-03-03 14:00:35 --> Champ 'nbPlaceR' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, prenom, nomEvenement, dateEvenement, nbPlaceR 
+                FROM utilisateur, evenement, reservation 
+                WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
+                AND evenement.idEvenement = reservation.idEvenement
+                AND reservation.idUtilisateur = 2')
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-03 14:01:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\MonControleur.php(52): CodeIgniter\Model->__call('getReserv', [])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 14:12:15 --> mysqli_sql_exception: Champ 'nbPlaceR' inconnu dans field list in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT nom, pre...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nom, pre...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nom, pre...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, pre...')
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-03-03 14:12:15 --> Champ 'nbPlaceR' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, prenom, nomEvenement, dateEvenement, nbPlaceR 
+                FROM utilisateur, evenement, reservation 
+                WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
+                AND evenement.idEvenement = reservation.idEvenement
+                AND reservation.idUtilisateur = 2')
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 14:12:43 --> mysqli_sql_exception: Champ 'nbPlaceR' inconnu dans field list in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT nom, pre...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nom, pre...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nom, pre...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, pre...')
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-03-03 14:12:43 --> Champ 'nbPlaceR' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, prenom, nomEvenement, dateEvenement, nbPlaceR 
+                FROM utilisateur, evenement, reservation 
+                WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
+                AND evenement.idEvenement = reservation.idEvenement
+                AND reservation.idUtilisateur = 9')
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 14:13:31 --> mysqli_sql_exception: Champ 'nbPlaceR' inconnu dans field list in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT nom, pre...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nom, pre...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nom, pre...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, pre...')
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-03-03 14:13:31 --> Champ 'nbPlaceR' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, prenom, nomEvenement, dateEvenement, nbPlaceR 
+                FROM utilisateur, evenement, reservation 
+                WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
+                AND evenement.idEvenement = reservation.idEvenement
+                AND reservation.idUtilisateur = 9')
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-03 14:13:32 --> mysqli_sql_exception: Champ 'nbPlaceR' inconnu dans field list in C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT nom, pre...', 0)
+#1 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nom, pre...')
+#2 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nom, pre...')
+#3 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, pre...')
+#4 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\app\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+#5 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+#6 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+#7 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\NVLVAGUE\Nouvelle-Vague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-03-03 14:13:32 --> Champ 'nbPlaceR' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Modele.php(26): CodeIgniter\Database\BaseConnection->query('SELECT nom, prenom, nomEvenement, dateEvenement, nbPlaceR 
+                FROM utilisateur, evenement, reservation 
+                WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
+                AND evenement.idEvenement = reservation.idEvenement
+                AND reservation.idUtilisateur = 9')
+ 2 APPPATH\Controllers\MonControleur.php(52): App\Models\Modele->getReserv()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

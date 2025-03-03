@@ -242,6 +242,13 @@
                 }
                 ?> 
         </li>
+        <li>
+            <?php
+             if($session->get('login')){
+                echo anchor('MonControleur/deconnexion', ' Déconnexion');
+                }
+                ?> 
+            </li>
         </ul>
     </nav>
 

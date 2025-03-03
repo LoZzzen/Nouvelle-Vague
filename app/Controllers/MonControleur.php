@@ -69,7 +69,7 @@ class MonControleur extends BaseController
     {
         // Charger plusieurs vues
         //echo view('index');
-        echo view('connexion');
+        return view('connexion');
     }
 
     public function inscription()
@@ -110,8 +110,9 @@ class MonControleur extends BaseController
                 $login = $this->request->getVar('Login');
                 $mdp = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
                 $user = $monmodel->connexion($login, $mdp);
+                $user2 = $monmodel->connexionMaire($login, $mdp);
 
-                if ($user) {
+                if ($user || $user2) {
                     // Démarrer la session
                     $session = \Config\Services::session();
                     $session->set('login', $login); // Crée une variable de session avec le login
@@ -123,7 +124,37 @@ class MonControleur extends BaseController
         }
     }
     public function validTF(){
-        
+            $monmodel = new \App\Models\Modele();
+            
+            $nom = $this->request->getVar('Nom');
+            $prenom = $this->request->getVar('Prenom');    
+            $nbPlace = $this->request->getVar('nbPlaceReserv');
+            $unTF = $this->request->getVar('idEvenement');
+            $monmodel->inscriTF($nom, $prenom, $nbPlace, $unTF);
+            $date = date('Y-m-d');
+            
+                $user = $this->Modele->getIdUtili($nom, $prenom);
+                if (!$user) {
+                    echo "Utilisateur non trouvé";
+                }
+                $event = $this->Modele->getIdTF($nomEvenement);
+                if (!$event) {
+                    echo "Événement non trouvé";
+                }
+
+                $data = [
+                    'dateDebut' => $date,
+                    'dateFin' => $date,
+                    'nbPlaceReserv' => $nbPlaces,
+                    'idUtilisateur' => $user['idUtilisateur'],
+                    'idEvenement' => $event['idEvenement']
+                ];
+
+                if ($this->Modele->insertReservation($data)) {
+                    return view('resevation');
+                } else {
+                    return view('inscription');
+                }
     }
 
     public function deconnexion() {
