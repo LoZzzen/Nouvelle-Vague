@@ -18,7 +18,7 @@ $routes->get('/MonControleur/lesTF', 'MonControleur::lesTF');
 $routes->get('/MonControleur/inscriTF', 'MonControleur::inscriTF');
 $routes->get('/MonControleur/reserv', 'MonControleur::reserv');
 
-
+$routes->get('/MonControleur/cnxMaire', 'MonControleur::cnxMaire');
 
 //STEPHEN : 
 $routes->get('/MonControleur/connexion', 'MonControleur::connexion');

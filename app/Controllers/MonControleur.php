@@ -46,16 +46,44 @@ class MonControleur extends BaseController
 
     //Affiche la reservation des utilistaeurs des TF
     public function reserv(){
+
         $monmodel = new Modele();
+        $session = session();
+
+        $userId = $session->get('idUtilisateur');
 
         // Récupérer les événements depuis la base de données
-        $data['lesReserv'] = $monmodel->getReserv();
+        // $data['lesReserv'] = $monmodel->getReserv();
+        $data['lesReserv'] = $monmodel->getReserv($userId);
 
         echo view('reservation',$data);
     }
-   
 
+   //Cnx Maire
+    public function cnxMaire() {
 
+        if($this->request->is('post')){
+
+            $monmodel = new \App\Models\Modele();
+            $login = $this->request->getVar('Login');
+            $mdp = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
+            $user = $monmodel->cnxMaire($login, $mdp);
+
+            if ($user) {
+                
+                $session = \Config\Services::session();
+                $session->set('login', $login); 
+    
+                return view('accueilMaire'); 
+            }
+            else {
+
+                return view('connexion'); 
+
+            } 
+        }
+    }
+    
 
 
 
@@ -110,7 +138,6 @@ class MonControleur extends BaseController
                 $login = $this->request->getVar('Login');
                 $mdp = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
                 $user = $monmodel->connexion($login, $mdp);
-                $user2 = $monmodel->connexionMaire($login, $mdp);
 
                 if ($user || $user2) {
                     // Démarrer la session

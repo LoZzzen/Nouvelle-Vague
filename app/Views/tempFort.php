@@ -155,6 +155,12 @@
             <li><?php echo anchor('MonControleur/index', ' Accueil'); ?></li>
             <li><?php echo anchor('MonControleur/lesTF', ' Temp Forts'); ?></li>
             <li><?php echo anchor('MonControleur/connexion', ' Connexion'); ?></li>
+            <li><?php $session = \Config\Services::session(); 
+             if($session->get('login')){
+                echo anchor('MonControleur/reserv', ' Réservation');
+                }
+                ?> 
+            </li>
         </ul>
     </nav>
 
