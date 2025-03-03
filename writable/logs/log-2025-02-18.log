@@ -1,0 +1,35 @@
+CRITICAL - 2025-02-18 16:06:36 --> Cannot access offset of type string on string
+in APPPATH\Views\reservation.php on line 192.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('reservation', [], true)
+ 4 APPPATH\Controllers\MonControleur.php(54): view('reservation', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-18 16:07:12 --> Cannot access offset of type string on string
+in APPPATH\Views\reservation.php on line 192.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('reservation', [], true)
+ 4 APPPATH\Controllers\MonControleur.php(54): view('reservation', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-18 16:17:17 --> Undefined property: App\Controllers\MonControleur::$session
+in APPPATH\Controllers\MonControleur.php on line 55.
+ 1 APPPATH\Controllers\MonControleur.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\MonControleur::$session', 'C:\\wamp64\\www\\Nouvelle-Vague\\app\\Controllers\\MonControleur.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-18 16:18:26 --> Undefined variable $userId
+in APPPATH\Models\Modele.php on line 41.
+ 1 APPPATH\Models\Modele.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userId', 'C:\\wamp64\\www\\Nouvelle-Vague\\app\\Models\\Modele.php', 41)
+ 2 APPPATH\Controllers\MonControleur.php(57): App\Models\Modele->getReserv(null)
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MonControleur->reserv()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MonControleur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
