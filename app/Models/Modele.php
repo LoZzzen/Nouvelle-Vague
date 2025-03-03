@@ -37,7 +37,7 @@
                 FROM utilisateur, evenement, reservation 
                 WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
                 AND evenement.idEvenement = reservation.idEvenement
-                AND reservation.idUtilisateur = 2";
+                AND reservation.idUtilisateur = 9";
                 //$query = $db->query($sql,[$userId]);
                 
                 $query = $db->query($sql);
