@@ -60,14 +60,14 @@ class MonControleur extends BaseController
     }
 
    //Cnx Maire
-    public function cnxMaire() {
+    public function coMaire() {
 
         if($this->request->is('post')){
 
             $monmodel = new \App\Models\Modele();
             $login = $this->request->getVar('Login');
             $mdp = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
-            $user = $monmodel->cnxMaire($login, $mdp);
+            $user = $monmodel->connexionMaire($login, $mdp);
 
             if ($user) {
                 
@@ -139,7 +139,7 @@ class MonControleur extends BaseController
                 $mdp = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
                 $user = $monmodel->connexion($login, $mdp);
 
-                if ($user || $user2) {
+                if ($user) {
                     // Démarrer la session
                     $session = \Config\Services::session();
                     $session->set('login', $login); // Crée une variable de session avec le login

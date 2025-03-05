@@ -193,7 +193,7 @@
                         <td><?= esc($reservation['prenom']); ?></td>
                         <td><?= esc($reservation['nomEvenement']); ?></td>
                         <td><?= esc($reservation['dateEvenement']); ?></td>
-                       
+                        <td><?= esc($reservation['nbPlaceR']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
