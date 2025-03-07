@@ -192,7 +192,7 @@ footer p {
 
     <!-- En-tête -->
     <header>
-        <h1>NOUVELLE VAGUE SECTION MAIRE </h1>
+        <h1>Le Top Des Temp Fort</h1>
     </header>
 
     <!-- Barre de navigation -->

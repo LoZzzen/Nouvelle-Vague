@@ -30,3 +30,5 @@ $routes->post('/MonControleur/validConnexion', 'MonControleur::validConnexion');
 $routes->get('/MonControleur/deconnexion', 'MonControleur::deconnexion');
 
 $routes->post('/MonControleur/validTF', 'MonControleur::validTF');
+$routes->get('/MonControleur/topTF', 'MonControleur::topTF');
+$routes->get('/MonControleur/accueilMaire', 'MonControleur::accueilMaire');

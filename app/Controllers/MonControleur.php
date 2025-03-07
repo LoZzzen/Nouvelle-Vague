@@ -194,6 +194,12 @@ class MonControleur extends BaseController
                     return view('inscription');
                 }
     }
+    public function topTF(){
+        return view('topTF');
+    }
+    public function accueilMaire(){
+        return view('accueilMaire');
+    }
 
     public function deconnexion() {
         // Charger le service de session
