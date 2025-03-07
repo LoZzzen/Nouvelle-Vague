@@ -6,73 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOUVELLE VAGUE</title>
     <style>
-        /* Style global */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            color: #333;
-            background-color: #f4f4f4;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+       /* Importation d'une police moderne */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-        /* En-tête */
-        header {
-            background-color: #1a73e8;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        /* Barre de navigation */
-        nav {
-            background-color:rgb(224, 240, 238);
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
+/* En-tête */
+header {
+    background: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-        nav li {
-            margin: 0 20px;
-        }
+/* Barre de navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 1.1em;
-            font-weight: 500;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-        nav a:hover {
-            color: #1a73e8;
-            transform: scale(1.1);
-        }
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #007bff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
 
         /* Formulaire */
         .registre {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 40px 20px;
+            padding: 70px 20px;
             background-color: #fafafa;
         }
 
