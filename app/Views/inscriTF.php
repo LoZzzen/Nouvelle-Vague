@@ -236,15 +236,13 @@
             ?>
         </li>
         <li>
-            <?php $session = \Config\Services::session(); 
-             if($session->get('login')){
-                echo anchor('MonControleur/reserv', ' Réservation');
-                }
+                <?php $session = \Config\Services::session(); 
+                    if($session->get('login')){
+                        echo anchor('MonControleur/reserv', ' Réservation');
                 ?> 
-        </li>
-        <li>
+            </li>
+            <li>
             <?php
-             if($session->get('login')){
                 echo anchor('MonControleur/deconnexion', ' Déconnexion');
                 }
                 ?> 

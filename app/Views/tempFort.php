@@ -155,9 +155,15 @@
             <li><?php echo anchor('MonControleur/index', ' Accueil'); ?></li>
             <li><?php echo anchor('MonControleur/lesTF', ' Temp Forts'); ?></li>
             <li><?php echo anchor('MonControleur/connexion', ' Connexion'); ?></li>
-            <li><?php $session = \Config\Services::session(); 
-             if($session->get('login')){
-                echo anchor('MonControleur/reserv', ' Réservation');
+            <li>
+                <?php $session = \Config\Services::session(); 
+                    if($session->get('login')){
+                        echo anchor('MonControleur/reserv', ' Réservation');
+                ?> 
+            </li>
+            <li>
+            <?php
+                echo anchor('MonControleur/deconnexion', ' Déconnexion');
                 }
                 ?> 
             </li>
@@ -183,11 +189,16 @@
                 <p><strong>Date :</strong> <?= esc($evenement['dateEvenement']); ?></p>
                 <p><strong>Lieu :</strong> <?= esc($evenement['lieu']); ?></p>
                 <p><strong>Description :</strong> <?= esc($evenement['description']); ?></p>
-
+                <?php $session = \Config\Services::session(); 
+                    if($session->get('login')){
+                ?>
                 <!-- Bouton "S'inscrire" -->
                 <div class="inscription-bouton">
                     <?php echo anchor('/MonControleur/inscriTF', 'S\'inscrire', ['class' => 'btn-inscrire']); ?>
                 </div>
+                <?php }else{
+                    echo"<p>Connectez-vous pour vous inscrire à cet événement.</p>";
+                } ?>
             </div>
             <?php endforeach; ?>
         </div>
