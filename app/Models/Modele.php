@@ -15,19 +15,24 @@
              }
 
              //Méthode de connexion
-             public function connexionMaire($log, $mdp) {
-                $db = \Config\Database::connect(); // Connexion à la base de données
+             public function connexionMaire($log) {
+                $db = \Config\Database::connect();
+                
+                $sql = "SELECT * FROM utilisateur WHERE login = ? AND role = 'Maire'";
+                $query = $db->query($sql, [$log]);
             
-                // Requête préparée avec des placeholders
-                $sql = "SELECT * FROM utilisateur WHERE login = ? AND mdp = ? AND role = 'Maire'";
-            
-                // Utilisation de la méthode "query" avec des données sécurisées
-                $result = $db->query($sql, [$log, $mdp]);
-            
-                $db->close(); // Fermeture de la connexion
-                return $result;
+                return $query->getRowArray(); // Récupère l'utilisateur sous forme de tableau associatif
             }
             
+            public function connexionArrivant($log) {
+                $db = \Config\Database::connect();
+                
+                $sql = "SELECT * FROM utilisateur WHERE login = ? AND role = 'Arrivant'";
+                $query = $db->query($sql, [$log]);
+            
+                return $query->getRowArray(); // Récupère l'utilisateur sous forme de tableau associatif
+            }
+             
 
             public function getReserv(){
                 $db = \Config\Database::connect();
@@ -38,7 +43,7 @@
                 FROM utilisateur, evenement, reservation 
                 WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
                 AND evenement.idEvenement = reservation.idEvenement
-                AND reservation.idUtilisateur = 2";
+                AND reservation.idUtilisateur = 1";
                 //$query = $db->query($sql,[$userId]);
                 
                 $query = $db->query($sql);
@@ -82,19 +87,6 @@
                 return $result;
             }
 
-                //Méthode de connexion
-                public function connexion($log, $mdp) {
-                    $db = \Config\Database::connect(); // Connexion à la base de données
-                
-                    // Requête préparée avec des placeholders
-                    $sql = "SELECT * FROM utilisateur WHERE login = ? AND mdp = ?";
-                
-                    // Utilisation de la méthode "query" avec des données sécurisées
-                    $result = $db->query($sql, [$log, $mdp]);
-                
-                    $db->close(); // Fermeture de la connexion
-                    return $result;
-                }
            
             public function getIdUtili($nom, $prenom){
                 $db = \Config\Database::connect();

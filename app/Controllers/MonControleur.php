@@ -133,23 +133,42 @@ class MonControleur extends BaseController
     }
     
     public function validConnexion() {
-        if($this->request->is('post')){
-                $monmodel = new \App\Models\Modele();
-                $login = $this->request->getVar('Login');
-                $mdp = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
-                $user = $monmodel->connexion($login, $mdp);
+        if ($this->request->is('post')) {
+            $monmodel = new \App\Models\Modele();
+            $login = $this->request->getVar('Login');
+            $mdp = $this->request->getVar('password'); // On ne hash pas ici
+    
+            // Vérifier d'abord si c'est un Arrivant
+            $user = $monmodel->connexionArrivant($login);
+    
+            if (!$user) {
+                // Si aucun Arrivant, on vérifie si c'est un Maire
+                $user = $monmodel->connexionMaire($login);
+            }
+    
+            // Vérifier si l'utilisateur existe et si le mot de passe correspond
+            if ($user && password_verify($mdp, $user['mdp'])) {
+                // Démarrer la session
+                $session = \Config\Services::session();
+                $session->set('login', $login); // Stocker le login en session
+    
+                // Vérifier le rôle pour rediriger
+                if ($user['role'] === 'Arrivant') {
 
-                if ($user) {
-                    // Démarrer la session
-                    $session = \Config\Services::session();
-                    $session->set('login', $login); // Crée une variable de session avec le login
-        
-                    return view('accueil'); // Rediriger vers la page d'accueil
-                }else {
-                return view('connexion');          
+                    return view('accueil'); // Page pour les arrivants
                 } 
+                else {
+                    
+                    return view('accueilMaire'); // Page pour le maire
+                }
+            } else {
+                return "Identifiants incorrects.";
+            }
         }
     }
+    
+    
+
     public function validTF(){
             $monmodel = new \App\Models\Modele();
             
