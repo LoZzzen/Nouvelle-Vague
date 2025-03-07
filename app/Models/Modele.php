@@ -17,22 +17,19 @@
              //Méthode de connexion
              public function connexionMaire($log) {
                 $db = \Config\Database::connect();
-                
                 $sql = "SELECT * FROM utilisateur WHERE login = ? AND role = 'Maire'";
                 $query = $db->query($sql, [$log]);
-            
-                return $query->getRowArray(); // Récupère l'utilisateur sous forme de tableau associatif
+                return $query->getRowArray(); // Retourne un tableau associatif
             }
             
             public function connexionArrivant($log) {
                 $db = \Config\Database::connect();
-                
                 $sql = "SELECT * FROM utilisateur WHERE login = ? AND role = 'Arrivant'";
                 $query = $db->query($sql, [$log]);
-            
-                return $query->getRowArray(); // Récupère l'utilisateur sous forme de tableau associatif
+                return $query->getRowArray(); // Retourne un tableau associatif
             }
-             
+            
+
 
             public function getReserv(){
                 $db = \Config\Database::connect();

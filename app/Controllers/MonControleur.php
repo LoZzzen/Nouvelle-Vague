@@ -133,39 +133,31 @@ class MonControleur extends BaseController
     }
     
     public function validConnexion() {
+
         if ($this->request->is('post')) {
             $monmodel = new \App\Models\Modele();
             $login = $this->request->getVar('Login');
-            $mdp = $this->request->getVar('password'); // On ne hash pas ici
+            $password = $this->request->getVar('password'); 
     
-            // Vérifier d'abord si c'est un Arrivant
             $user = $monmodel->connexionArrivant($login);
+            $user1 = $monmodel->connexionMaire($login);
     
-            if (!$user) {
-                // Si aucun Arrivant, on vérifie si c'est un Maire
-                $user = $monmodel->connexionMaire($login);
-            }
-    
-            // Vérifier si l'utilisateur existe et si le mot de passe correspond
-            if ($user && password_verify($mdp, $user['mdp'])) {
-                // Démarrer la session
+            if ($user && password_verify($password, $user['mdp'])) {
                 $session = \Config\Services::session();
-                $session->set('login', $login); // Stocker le login en session
-    
-                // Vérifier le rôle pour rediriger
-                if ($user['role'] === 'Arrivant') {
+                $session->set('login', $login); 
+                return view('accueil'); 
+            } 
+            else if ($user1 && password_verify($password, $user1['mdp'])) {
 
-                    return view('accueil'); // Page pour les arrivants
-                } 
-                else {
-                    
-                    return view('accueilMaire'); // Page pour le maire
-                }
+                return view('accueilMaire');
+
             } else {
-                return "Identifiants incorrects.";
+                return view('connexion'); 
             }
         }
     }
+    
+        
     
     
 
