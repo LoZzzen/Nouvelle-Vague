@@ -94,6 +94,41 @@ nav a:hover::after {
     transform: scaleX(1);
 }
 
+  /* Tableau des Top Temp Fort */
+  .profil {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profil th,
+        .profil td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .profil th {
+            background-color: #1a73e8;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        .profil td {
+            background-color: #f9f9f9;
+        }
+
+        .profil tr:nth-child(even) td {
+            background-color: #f1f1f1;
+        }
+
+        .profil tr:hover td {
+            background-color: #e1e1e1;
+        }
+
 /* Section principale */
 .main {
     text-align: center;
@@ -235,7 +270,7 @@ footer p {
     </nav>
     
     <h2>Profil</h2>
-    <table border="1">
+    <table class="profil">
         <tr>
             <th>Nom</th>
             <th>Prenom</th>

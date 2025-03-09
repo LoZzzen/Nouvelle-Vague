@@ -214,6 +214,11 @@ footer p {
                 ?>
             </li>
             <li>
+                <?php
+                    echo anchor('MonControleur/formTF', 'Ajouter un Temp Fort');
+                ?>
+            </li>
+            <li>
                 <?php 
                 echo anchor('MonControleur/deconnexion', ' Déconnexion');
                 ?> 
