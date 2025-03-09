@@ -22,6 +22,7 @@ $routes->get('/MonControleur/coMaire', 'MonControleur::coMaire');
 $routes->get('/MonControleur/connexion', 'MonControleur::connexion');
 
 $routes->get('/MonControleur/consultReserv', 'MonControleur::consultReserv');
+$routes->get('/MonControleur/ajouterTF', 'MonControleur::ajouterTF');
 
 //STEPHEN : 
 $routes->get('/MonControleur/inscription', 'MonControleur::inscription');

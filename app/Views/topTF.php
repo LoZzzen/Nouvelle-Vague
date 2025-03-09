@@ -200,6 +200,11 @@
                 ?>
             </li>
             <li>
+                <?php
+                    echo anchor('MonControleur/ajouterTF', 'Ajouter un Temp Fort');
+                ?>
+            </li>
+            <li>
                 <?php 
                 echo anchor('MonControleur/deconnexion', ' Déconnexion');
                 ?> 

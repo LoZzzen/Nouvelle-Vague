@@ -98,7 +98,43 @@ class MonControleur extends BaseController
         }
     }
     
+    public function ajouterTF() {   
+        
+        if ($this->request->is('post')) {
+            $validation = \Config\Services::validation();
+    
+            $validation->setRules([
+                'Nom' => 'required|max_length[60]',
+                'Description' => 'required|max_length[755]',
+                'Lieu' => 'required|max_length[255]',
+                'date' => 'required|max_length[255]|min_length[5]',
+                'NbPlace' => 'required|max_length[255]|min_length[1]'
+            ]);
+    
+            if ($validation->withRequest($this->request)->run()) {
 
+                $monmodel = new \App\Models\Modele();
+                $nom = $this->request->getVar('Nom');
+                $Description = $this->request->getVar('Description');
+                $Lieu = $this->request->getVar('Lieu');
+                $date = $this->request->getVar('date');
+                $NbPlace = $this->request->getVar('NbPlace');
+    
+                $monmodel->insertTF($nom, $Description, $Lieu, $date, $NbPlace);
+            } 
+            else {
+
+                return view('ajoutTF', [
+
+                    'validation' => $this->validator 
+
+                ]);
+            }
+        } 
+        else {
+            return view('ajoutTF');
+        }
+    }
 
 
     //STEPHEN :

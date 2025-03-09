@@ -68,21 +68,17 @@
                 return $query->getResultArray();
             }
 
-             /*public function getReserv($userId) {
-                $db = \Config\Database::connect();
+            
+            public function insertTF($nom, $description, $Lieu, $date, $nbPlace) {
                 
-                $sql = "SELECT utilisateur.nom, utilisateur.prenom, evenement.nomEvenement, evenement.dateEvenement, reservation.nbPlaceR 
-                        FROM utilisateur
-                        INNER JOIN reservation ON utilisateur.idUtilisateur = reservation.idUtilisateur
-                        INNER JOIN evenement ON evenement.idEvenement = reservation.idEvenement
-                        WHERE reservation.idUtilisateur = ?";
-                
-                $query = $db->query($sql, [$userId]);
-                
-                $db->close();
-                
-                return $query->getResultArray();
-            }*/
+                $db = \Config\Database::connect(); 
+            
+                $sql = "INSERT INTO evenement (nomEvenement, description, lieu, dateEvenement, nbPlace) VALUES (?, ?, ?, ?, ?)";
+            
+                $result = $db->query($sql, [$nom, $description, $Lieu, $date, $nbPlace]);
+            
+                return $result;
+            }
             
             
          
