@@ -222,6 +222,20 @@ footer p {
             </li>
         </ul>
     </nav>
+    <h2>Top des événements les plus réservés</h2>
+    <table border="1">
+        <tr>
+            <th>Nom du Temp Fort</th>
+            <th>Nombre total de réservations</th>
+        </tr>
+        <?php foreach ($lesTopEvenements as $event): ?>
+            <tr>
+                <td><?= $event['nomEvenement']; ?></td>
+                <td><?= $event['nombre_reservations']; ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+
 
     <!-- Pied de page -->
     <footer>

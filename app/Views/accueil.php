@@ -222,6 +222,12 @@ footer p {
             <li>
             <?php
                 echo anchor('MonControleur/deconnexion', ' Déconnexion');
+                
+                ?> 
+            </li>
+            <li>
+            <?php
+                  echo anchor('MonControleur/profile', 'Bienvenue'.'  '.$session->get('login').'!');
                 }
                 ?> 
             </li>

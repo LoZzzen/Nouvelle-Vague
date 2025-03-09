@@ -115,6 +115,26 @@
                 $this->db->insert('reservation', $data);
                 return $this->db->insert();
             }
+            public function getTopTF(){
+                $db = \Config\Database::connect();
+
+                $sql = "SELECT nomEvenement, COUNT(*) AS nombre_reservations
+                        FROM reservation, evenement
+                        WHERE reservation.idEvenement = evenement.idEvenement
+                        GROUP BY nomEvenement
+                        ORDER BY nombre_reservations DESC";
+
+                    $query = $db->query($sql);
+                    $db->close();
+
+                    return $query->getResultArray();
+                }
+            
+                public function getUtilisateur($login) {
+                    $db = \Config\Database::connect();
+                    $query = $db->query("SELECT * FROM utilisateur WHERE login = ?", [$login]);
+                    return $query->getResultArray();
+                }
                      
             /*public function inscriTF($unId, $nbPlace, $unTF){
                 $unId->getIdUtili();

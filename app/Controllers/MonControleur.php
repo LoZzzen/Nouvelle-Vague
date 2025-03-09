@@ -195,8 +195,33 @@ class MonControleur extends BaseController
                 }
     }
     public function topTF(){
-        return view('topTF');
+        $monmodel = new \App\Models\Modele();
+        
+        $data['lesTopEvenements'] = $monmodel->getTopTF();
+        return view('topTF', $data);
     }
+
+    public function profile() {
+        $session = session(); // Récupération de la session
+        $login = $session->get('login'); // Récupération du login stocké en session
+
+        if (!$login) {
+            return redirect()->to('/login'); // Redirection si non connecté
+        }
+
+        $monmodel = new \App\Models\Modele();
+        $data['unUtilisateur'] = $monmodel->getUtilisateur($login);
+
+        return view('profil', $data);
+    }
+
+    public function modifMdp(){
+
+        return view('nvxMdp');
+    }
+    
+    
+    
     public function accueilMaire(){
         return view('accueilMaire');
     }
