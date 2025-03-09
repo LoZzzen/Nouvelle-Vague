@@ -76,7 +76,8 @@
                 $sql = "INSERT INTO evenement (nomEvenement, description, lieu, dateEvenement, nbPlace) VALUES (?, ?, ?, ?, ?)";
             
                 $result = $db->query($sql, [$nom, $description, $Lieu, $date, $nbPlace]);
-            
+                
+                $db->close(); 
                 return $result;
             }
             

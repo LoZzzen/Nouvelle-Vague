@@ -201,7 +201,7 @@
             </li>
             <li>
                 <?php
-                    echo anchor('MonControleur/ajouterTF', 'Ajouter un Temp Fort');
+                    echo anchor('MonControleur/formTF', 'Ajouter un Temp Fort');
                 ?>
             </li>
             <li>

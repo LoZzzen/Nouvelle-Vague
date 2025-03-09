@@ -319,12 +319,12 @@ footer p {
 
             <div class="nvxTF">
                 <?= form_label('Description : ') ?>
-                <?php echo form_input('description', set_value('Description')); ?> 
+                <?php echo form_input('Description', set_value('Description')); ?> 
             </div>
 
             <div class="nvxTF">
                 <?= form_label('Lieu : ') ?>
-                <?php echo form_input('lieu', set_value('Lieu')); ?>  
+                <?php echo form_input('Lieu', set_value('Lieu')); ?>  
             </div>
 
             <div class="nvxTF">
