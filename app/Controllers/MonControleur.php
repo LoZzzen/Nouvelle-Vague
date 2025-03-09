@@ -59,6 +59,20 @@ class MonControleur extends BaseController
         echo view('reservation',$data);
     }
 
+    public function consultReserv(){
+
+        $monmodel = new Modele();
+        $session = session();
+
+        $userId = $session->get('idUtilisateur');
+
+        // Récupérer les événements depuis la base de données
+        // $data['lesReserv'] = $monmodel->getReserv();
+        $data['lesConsultations'] = $monmodel->getConsultResTF($userId);
+
+        echo view('consultResTf',$data);
+    }
+
    //Cnx Maire
     public function coMaire() {
 

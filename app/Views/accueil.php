@@ -209,11 +209,6 @@ footer p {
                 ?>
             </li>
             <li>
-                <?php
-                    echo anchor('MonControleur/connexion', 'Connexion');
-                ?>
-            </li>
-            <li>
                 <?php $session = \Config\Services::session(); 
                     if($session->get('login')){
                         echo anchor('MonControleur/reserv', ' Réservation');

@@ -215,18 +215,17 @@ footer p {
                  echo anchor('MonControleur/lesTF', ' Temp Forts'); 
             ?>
         </li>
-        <br> <br>
-        <li>
-            <?php
-                echo anchor('MonControleur/connexion', ' Connexion'); 
-            ?>
-        </li>
         <li>
                 <?php $session = \Config\Services::session(); 
                     if($session->get('login')){
                         echo anchor('MonControleur/reserv', ' Réservation');
                 ?> 
-            </li>
+        </li>
+        <li>
+            <?php
+                echo anchor('MonControleur/connexion', ' Connexion'); 
+            ?>
+        </li>
             <li>
             <?php
                 echo anchor('MonControleur/deconnexion', ' Déconnexion');

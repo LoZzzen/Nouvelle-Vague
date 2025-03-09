@@ -19,9 +19,11 @@ $routes->get('/MonControleur/inscriTF', 'MonControleur::inscriTF');
 $routes->get('/MonControleur/reserv', 'MonControleur::reserv');
 
 $routes->get('/MonControleur/coMaire', 'MonControleur::coMaire');
+$routes->get('/MonControleur/connexion', 'MonControleur::connexion');
+
+$routes->get('/MonControleur/consultReserv', 'MonControleur::consultReserv');
 
 //STEPHEN : 
-$routes->get('/MonControleur/connexion', 'MonControleur::connexion');
 $routes->get('/MonControleur/inscription', 'MonControleur::inscription');
 
 $routes->post('/MonControleur/valideFormulaire', 'MonControleur::valideFormulaire');

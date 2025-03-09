@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOUVELLE VAGUE</title>
     <style>
-        /* Importation d'une police moderne */
+            /* Importation d'une police moderne */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
         /* Style global */
@@ -94,8 +94,8 @@
             transform: scaleX(1);
         }
 
-        /* Tableau des Top Temp Fort */
-        .topTf {
+        /* Tableau des réservations consultation*/
+        .reservation-consultation {
             width: 80%;
             margin: 30px auto;
             border-collapse: collapse;
@@ -104,32 +104,32 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .topTf th,
-        .topTf td {
+        .reservation-consultation th,
+        .reservation-consultation td {
             padding: 12px 15px;
             text-align: left;
             border: 1px solid #ddd;
         }
 
-        .topTf th {
+        .reservation-consultation th {
             background-color: #1a73e8;
             color: white;
             font-size: 1.1em;
         }
 
-        .topTf td {
+        .reservation-consultation td {
             background-color: #f9f9f9;
         }
 
-        .topTf tr:nth-child(even) td {
+        .reservation-consultation tr:nth-child(even) td {
             background-color: #f1f1f1;
         }
 
-        .topTf tr:hover td {
+        .reservation-consultation tr:hover td {
             background-color: #e1e1e1;
         }
 
-        /* Pied de page */
+       /* Pied de page */
         footer {
             background: #007bff;
             color: white;
@@ -145,40 +145,38 @@
             font-size: 1em;
         }
 
+
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.4em;
             }
 
             nav ul {
                 flex-direction: column;
-                text-align: center;
-                gap: 10px;
             }
 
             .main {
-                padding: 40px 20px;
-                width: 95%;
+                padding: 30px 20px;
+                width: 90%;
             }
 
-            .button {
+            .cta-button {
                 font-size: 1em;
-                padding: 10px 20px;
+                padding: 10px 25px;
             }
 
-            .topTf {
+            .reservation-table {
                 width: 95%;
             }
         }
-
     </style>
 </head>
 <body>
 
     <!-- En-tête -->
     <header>
-        <h1>Le Top Des Temp Forts</h1>
+        <h1>CONSULTATION DES RESERVATIONS DES ARRIVANTS </h1>
     </header>
 
     <!-- Barre de navigation -->
@@ -200,6 +198,12 @@
                 ?>
             </li>
             <li>
+            <?php
+                echo anchor('MonControleur/deconnexion', ' Déconnexion');
+                
+                ?> 
+            </li>
+            <li>
                 <?php $session = \Config\Services::session(); 
                     if($session->get('login')){
                         echo anchor('MonControleur/deconnexion', ' Déconnexion');
@@ -209,19 +213,35 @@
         </ul>
     </nav>
 
-    <h2>Top des événements les plus réservés</h2>
-    <table class="topTf">
-        <tr>
-            <th>Nom du Temp Fort</th>
-            <th>Nombre total de réservations</th>
-        </tr>
-        <?php foreach ($lesTopEvenements as $event): ?>
-            <tr>
-                <td><?= $event['nomEvenement']; ?></td>
-                <td><?= $event['nombre_reservations']; ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
+    <!-- Affichage des réservations en tableau -->
+    <div class="listeReservation">
+        <table class="reservation-consultation">
+            <thead>
+                <tr>
+                    <th>idUtilisateur</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Login</th>
+                    <th>Événement</th>
+                    <th>Date</th>
+                    <th>Nombre de places réservées</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($lesConsultations as $consultTF): ?>
+                    <tr>
+                        <td><?= esc($consultTF['idUtilisateur']); ?></td>
+                        <td><?= esc($consultTF['nom']); ?></td>
+                        <td><?= esc($consultTF['prenom']); ?></td>
+                        <td><?= esc($consultTF['login']); ?></td>
+                        <td><?= esc($consultTF['nomEvenement']); ?></td>
+                        <td><?= esc($consultTF['dateEvenement']); ?></td>
+                        <td><?= esc($consultTF['nbPlaceR']); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 
     <!-- Pied de page -->
     <footer>

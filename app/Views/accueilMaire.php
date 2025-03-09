@@ -192,7 +192,7 @@ footer p {
 
     <!-- En-tête -->
     <header>
-        <h1>NOUVELLE VAGUE SECTION MAIRE </h1>
+        <h1>NOUVELLE VAGUE</h1>
     </header>
 
     <!-- Barre de navigation -->
@@ -210,7 +210,7 @@ footer p {
             </li>
             <li>
                 <?php
-                    echo anchor('MonControleur/connexion', 'Connexion');
+                    echo anchor('MonControleur/consultReserv', 'Consultation des reservations');
                 ?>
             </li>
             <li>
@@ -222,6 +222,15 @@ footer p {
             </li>
         </ul>
     </nav>
+
+    <!-- Section principale -->
+    <div class="main">
+        <h2>Bienvenue sur votre page monsieur le maire </h2>
+        <p>
+            Bonjour monsieur RoSteph
+        </p>
+        
+    </div>
 
     <!-- Pied de page -->
     <footer>

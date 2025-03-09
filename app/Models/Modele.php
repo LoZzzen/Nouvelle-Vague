@@ -29,8 +29,7 @@
                 return $query->getRowArray(); // Retourne un tableau associatif
             }
             
-
-
+            //reservation des arrivants 
             public function getReserv(){
                 $db = \Config\Database::connect();
                 
@@ -40,7 +39,27 @@
                 FROM utilisateur, evenement, reservation 
                 WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
                 AND evenement.idEvenement = reservation.idEvenement
-                AND reservation.idUtilisateur = 1";
+                AND reservation.idUtilisateur = 2";
+                //$query = $db->query($sql,[$userId]);
+                
+                $query = $db->query($sql);
+                $db->close();
+
+                return $query->getResultArray();
+            }
+
+            //consultation de tout les reservation des arrivants
+
+            public function getConsultResTF(){
+                $db = \Config\Database::connect();
+                
+                //$userId = session()->get('idUtilisateur');
+
+                $sql = "SELECT  utilisateur.idUtilisateur, nom, prenom, login, nomEvenement, dateEvenement, nbPlaceR 
+                FROM utilisateur, evenement, reservation 
+                WHERE utilisateur.idUtilisateur = reservation.idUtilisateur
+                AND evenement.idEvenement = reservation.idEvenement";
+
                 //$query = $db->query($sql,[$userId]);
                 
                 $query = $db->query($sql);
