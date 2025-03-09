@@ -232,6 +232,12 @@ nav a:hover::after {
             <li>
             <?php
                 echo anchor('MonControleur/deconnexion', ' Déconnexion');
+                
+                ?> 
+            </li>
+            <li>
+            <?php
+                  echo anchor('MonControleur/profil', 'Bienvenue'.'  '.$session->get('login').'!');
                 }
                 ?> 
             </li>
@@ -256,7 +262,7 @@ nav a:hover::after {
             <br><br>
 
                     <?= form_label('Mot de passe : ') ?>
-                    <?php echo form_input('password', set_value('password')); ?>
+                    <?php echo form_password('password', set_value('password')); ?>
                 </div>
 
             </div>

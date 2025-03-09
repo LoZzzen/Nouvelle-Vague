@@ -154,6 +154,18 @@
                     $query = $db->query("SELECT * FROM utilisateur WHERE login = ?", [$login]);
                     return $query->getResultArray();
                 }
+
+                public function getAncienMdp($mdp, $login) {
+                    $db = \Config\Database::connect();
+                
+                    // Utilisation d'une requête préparée
+                    $sql = "UPDATE utilisateur SET mdp = ? WHERE login = ?";
+                    $result = $db->query($sql, [$mdp, $login]); 
+                
+                    $db->close();
+                    return $result;
+                }
+                
                      
             /*public function inscriTF($unId, $nbPlace, $unTF){
                 $unId->getIdUtili();

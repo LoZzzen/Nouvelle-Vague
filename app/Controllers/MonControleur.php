@@ -129,7 +129,8 @@ class MonControleur extends BaseController
             'Nom' => 'required|max_length[30]',
             'Prenom' => 'required|max_length[255]',
             'Login' => 'required|max_length[255]',
-            'password' => 'required|max_length[255]|min_length[5]',
+             //contrainte de 10 caractère comprenant 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial
+            'password' => 'required|min_length[10]|max_length[255]|regex_match[/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[\W_]).{10,}$/]',
             ];
             if($this->request->is('post') && $this->validate($rules)){
                 $monmodel = new \App\Models\Modele();
@@ -215,7 +216,7 @@ class MonControleur extends BaseController
         return view('topTF', $data);
     }
 
-    public function profile() {
+    public function profil() {
         $session = session(); // Récupération de la session
         $login = $session->get('login'); // Récupération du login stocké en session
 
@@ -230,7 +231,31 @@ class MonControleur extends BaseController
     }
 
     public function modifMdp(){
+        $rules = [
+            //contrainte de 10 caractère comprenant 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial
+            'nMdp' => 'required|min_length[10]|max_length[255]|regex_match[/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[\W_]).{10,}$/]',
+            ];
+        if ($this->request->is('post') && $this->validate($rules)) {
+            $monmodel = new \App\Models\Modele();
+            $session = \Config\Services::session();
+            $mdp = password_hash($this->request->getVar('nMdp'), PASSWORD_BCRYPT);
+            $login = $session->get('login');
+            $data['unUtilisateur'] = $monmodel->getUtilisateur($login);
+                       
+                if ($monmodel->getAncienMdp($mdp, $login)) {
+                    echo "Mot de passe modifié";
+                    return view('profil', $data);
+                }
 
+        }
+        else {
+            echo "Erreur lors de la mise à jour du mot de passe";
+            return view('nvxMdp');
+        }
+            
+    }
+
+    public function nvMdp(){
         return view('nvxMdp');
     }
     

@@ -206,6 +206,12 @@ nav a:hover::after {
             <li>
             <?php
                 echo anchor('MonControleur/deconnexion', ' Déconnexion');
+                
+                ?> 
+            </li>
+            <li>
+            <?php
+                  echo anchor('MonControleur/profil', 'Bienvenue'.'  '.$session->get('login').'!');
                 }
                 ?> 
             </li>

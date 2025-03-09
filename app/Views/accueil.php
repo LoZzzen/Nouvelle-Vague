@@ -222,7 +222,7 @@ footer p {
             </li>
             <li>
             <?php
-                  echo anchor('MonControleur/profile', 'Bienvenue'.'  '.$session->get('login').'!');
+                  echo anchor('MonControleur/profil', 'Bienvenue'.'  '.$session->get('login').'!');
                 }
                 ?> 
             </li>

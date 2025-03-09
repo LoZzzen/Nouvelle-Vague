@@ -200,10 +200,8 @@
                 ?>
             </li>
             <li>
-                <?php $session = \Config\Services::session(); 
-                    if($session->get('login')){
-                        echo anchor('MonControleur/deconnexion', ' Déconnexion');
-                    }
+                <?php 
+                echo anchor('MonControleur/deconnexion', ' Déconnexion');
                 ?> 
             </li>
         </ul>

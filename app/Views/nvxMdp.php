@@ -247,7 +247,7 @@ nav a:hover::after {
             <li>
             <?php
                   echo anchor('MonControleur/profile', 'Bienvenue'.'  '.$session->get('login').'!');
-                }
+                    }
                 ?> 
             </li>
         </ul>
@@ -265,11 +265,6 @@ nav a:hover::after {
             <div class="éléments-utilisateur">
 
                 <div class="champ-entrée">
-                    <?= form_label('Ancien Mot de Passe : ') ?>
-                    <?php echo form_input('aMdp', set_value('aMdp')); ?>
-
-            <br><br>
-
                     <?= form_label('Nouveau Mot de Passe : ') ?>
                     <?php echo form_input('nMdp', set_value('nMdp')); ?>
                 </div>

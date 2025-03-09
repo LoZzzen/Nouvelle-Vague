@@ -34,5 +34,6 @@ $routes->get('/MonControleur/deconnexion', 'MonControleur::deconnexion');
 $routes->post('/MonControleur/validTF', 'MonControleur::validTF');
 $routes->get('/MonControleur/topTF', 'MonControleur::topTF');
 $routes->get('/MonControleur/accueilMaire', 'MonControleur::accueilMaire');
-$routes->get('/MonControleur/profile', 'MonControleur::profile');
-$routes->get('/MonControleur/modifMdp', 'MonControleur::modifMdp');
+$routes->get('/MonControleur/profil', 'MonControleur::profil');
+$routes->post('/MonControleur/modifMdp', 'MonControleur::modifMdp');
+$routes->get('/MonControleur/nvMdp', 'MonControleur::nvMdp');
